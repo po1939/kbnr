@@ -1,18 +1,41 @@
+// Import necessary dependencies
 import React from 'react';
-import logo from './logo.svg';
-import './App.scss';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
-function App() {
+// Import components
+import Header from './components/common/Header';
+import Footer from './components/common/Footer';
+import Home from './components/home/Home';
+import About from './components/about/About';
+import Menu from './components/menu/Menu';
+import Contact from './components/contact/Contact';
+
+// Main App component
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-      </header>
-    </div>
+    <Router>
+      <div className="app">
+        {/* Header component */}
+        <Header />
+
+        {/* Main content */}
+        <main className="content">
+          {/* Switch component to render the first matching Route */}
+
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/menu" element={<Menu />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="*" element={<div>404 Not Found</div>} />
+          </Routes>
+        </main>
+
+        {/* Footer component */}
+        <Footer />
+      </div>
+    </Router>
   );
-}
+};
 
 export default App;
