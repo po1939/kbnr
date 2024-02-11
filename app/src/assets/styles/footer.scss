@@ -3,12 +3,13 @@
 footer {
     font-family: 'Montserrat', sans-serif;
     background-color: black;
-    color: white;
+    color: lightgrey;
+    font-weight: lighter;
+    font-size: smaller;
     width: 100%;
 
     .footer-container {
-        padding: 5rem;
-
+        padding: 3rem;
     }
 
     .footer-contents {
@@ -18,28 +19,54 @@ footer {
 
         .business-container {
             .hour-container {
+                //color: lightgrey;
                 display: flex;
                 justify-content: space-between;
                 width: 300px;
+                padding-bottom: 5px;
 
                 .time {
                     width: 150px;
                     text-align: left;
                 }
             }
+            .other-text {
+                //color: lightgrey;
+                padding-top:20px
+            }
         }
 
         .nav-container {
             display:grid;
-            grid-template-columns: auto auto auto;
+            gap: 12px 25px;
+            grid-template-columns: fit-content(100%) fit-content(20%) fit-content(10px);
+            a{
+                color: lightgrey;
+                text-decoration: none;
+                &:active, &:hover{
+                    font-weight: 500;
+                    color: $primary-red;
+                }    
+            }
         }
+
+        .map-container{
+            display:flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding-top: 15px;
+            width:300px;
+            font-family: 'Open Sans', sans-serif;
+        }
+            //color: lightgrey;
     }
 }
 
+
 .second-box {
+    padding: 3rem;
     font-family: 'Open Sans', sans-serif;
     background-color: white;
     color: black;
-    width: 1441px;
-    height: 54px;
+    width: 100%;
 }

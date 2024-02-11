@@ -1,5 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import logo from './../../assets/images/kimnafooter.svg';
+import GoogleMapsEmbed from './GoogleMap';
 
 const Footer: React.FC = () => {
   return (
@@ -24,22 +26,44 @@ const Footer: React.FC = () => {
                   <div className='time'>CLOSED</div>
                 </div>
               </div>
-              <div>Dine In Closes 30 Minutes Prior To Closing Time</div>
-              <div>(410) 456-9166</div>
-            </div>
-            <div className="nav-container">
-              <h3>About US</h3>
-              <h3>MENu</h3>
-              <h3>Contact</h3>
-              <div>OUR STORY</div>
-              <div>KIMBAP</div>
-              <div />
-              <div>OUR PROMISE</div>
+              <div>
+                <div className="other-text">
+                  <div>Dine In Closes 30 Minutes Prior To Closing Time</div>
+                </div>
+                <div className="other-text">
+                  <h3>(410) 456-9166</h3>
+                </div>
+              </div>
 
             </div>
-            <div className="map-container">
-              map content here
+            <div className="nav-container">
+              <h3>About Us</h3>
+              <h3>Menu</h3>
+              <h3>Contact</h3>
+              
+              <div><Link to="/Our Story">OUR STORY</Link></div>
+              
+              <div><Link to="/Kimbap">KIMBAP</Link></div>
+              <div />
+              <div><Link to="/Our Promise">OUR PROMISE</Link></div>
+              <div><Link to="/Entree">ENTREE</Link></div>
+              <div />
+              <div />
+              <div><Link to="/Noodle">NOODLE</Link></div>
+              <div />
+              <div />
+              <div><Link to="/Snack">SNACK</Link></div>
+              <div />
+              <div />
+              <div><Link to="/Special Combo">SPECIAL COMBO</Link></div>
+              <div />
             </div>
+
+            <div className="map-container">
+              <GoogleMapsEmbed/>
+              <h3> 9339 Baltimore National Pike, Ellicott City, MD 21042</h3>
+            </div>
+
           </div>
         </div>
       </footer>
