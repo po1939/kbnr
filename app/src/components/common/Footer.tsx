@@ -1,7 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import logo from './../../assets/images/kimnafooter.svg';
-import GoogleMapsEmbed from './GoogleMap';
+import map from './../../assets/images/googlemap.png';
+import CTAButton from './CTAButton';
+import instagramicon from './../../assets/images/instagramicon.svg';
+import yelpicon from './../../assets/images/yelpicon.svg';
+
 
 const Footer: React.FC = () => {
   return (
@@ -60,8 +64,15 @@ const Footer: React.FC = () => {
             </div>
 
             <div className="map-container">
-              <GoogleMapsEmbed/>
+              <a href='/'>
+                <img src={map} />
+              </a>
               <h3> 9339 Baltimore National Pike, Ellicott City, MD 21042</h3>
+              <div className="social-links">
+                <CTAButton to="https://www.instagram.com/kimbapnaraec/?next=%2F" imgSrc={instagramicon} />
+                <CTAButton to="https://www.yelp.com/biz/kim-bob-na-ra-ellicott-city-2" imgSrc={yelpicon} />                
+              </div>
+
             </div>
 
           </div>

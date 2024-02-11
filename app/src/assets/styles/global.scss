@@ -26,4 +26,10 @@ h3{
     border-radius: 30px !important;
     box-shadow: none !important;
     font-size: 20px !important;
+    
+    &.icon-btn{
+        min-width: 0;
+        width: 30px;
+        height: 30px;
+    }
 }
