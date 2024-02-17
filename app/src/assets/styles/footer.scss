@@ -16,17 +16,12 @@ footer {
     .footer-contents {
         display: flex;
         flex-direction: row;
-        //align-items: flex-start;
         justify-content: space-between;
         
         .business-container {
-            //align-items: flex-start;
             display: flex;
             flex-direction: column;
-            //justify-content: space-evenly;
-            
             .hour-container {
-                //color: lightgrey;
                 display: flex;
                 justify-content: space-between;
                 width: 300px;
@@ -38,14 +33,12 @@ footer {
                 }
             }
             .other-text {
-                //color: lightgrey;
                 padding-top:20px
             }
         }
 
         .nav-container {
             display:grid;
-            //grid-row-gap: 1px; 
             grid-column-gap: 25px;
             grid-template-columns: fit-content(100%) fit-content(20%) fit-content(10px);
             a{
@@ -72,7 +65,7 @@ footer {
                 justify-content: space-between;
             }
         }
-            //color: lightgrey;
+           
     }
 }
 
@@ -82,6 +75,4 @@ footer {
     font-family: 'Open Sans', sans-serif;
     background-color: white;
     color: black;
-    //width: 100%;
-    //height: 1px;
 }

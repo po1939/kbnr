@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import logo from './../../assets/images/kimnafooter.svg';
-import map from './../../assets/images/googlemap.png';
+import GoogleMapComponent from './GoogleMap';
 import CTAButton from './CTAButton';
 import instagramicon from './../../assets/images/instagramicon.svg';
 import yelpicon from './../../assets/images/yelpicon.svg';
@@ -45,31 +45,29 @@ const Footer: React.FC = () => {
               <h3>Menu</h3>
               <h3>Contact</h3>
               
-              <div><Link to="/Our Story">OUR STORY</Link></div>
+              <div><Link to="/our-story">OUR STORY</Link></div>
               
-              <div><Link to="/Kimbap">KIMBAP</Link></div>
+              <div><Link to="/kimbap">KIMBAP</Link></div>
               <div />
-              <div><Link to="/Our Promise">OUR PROMISE</Link></div>
-              <div><Link to="/Entree">ENTREE</Link></div>
-              <div />
-              <div />
-              <div><Link to="/Noodle">NOODLE</Link></div>
+              <div><Link to="/our-promise">OUR PROMISE</Link></div>
+              <div><Link to="/entree">ENTREE</Link></div>
               <div />
               <div />
-              <div><Link to="/Snack">SNACK</Link></div>
+              <div><Link to="/noodle">NOODLE</Link></div>
               <div />
               <div />
-              <div><Link to="/Special Combo">SPECIAL COMBO</Link></div>
+              <div><Link to="/snack">SNACK</Link></div>
+              <div />
+              <div />
+              <div><Link to="/special Combo">SPECIAL COMBO</Link></div>
               <div />
             </div>
 
             <div className="map-container">
-              <a href='/'>
-                <img src={map} />
-              </a>
+              <GoogleMapComponent/>
               <h3> 9339 Baltimore National Pike, Ellicott City, MD 21042</h3>
               <div className="social-links">
-                <CTAButton to="https://www.instagram.com/kimbapnaraec/?next=%2F" imgSrc={instagramicon} />
+                <CTAButton to="https://www.instagram.com/kimbapnaraec/" imgSrc={instagramicon} />
                 <CTAButton to="https://www.yelp.com/biz/kim-bob-na-ra-ellicott-city-2" imgSrc={yelpicon} />                
               </div>
 
