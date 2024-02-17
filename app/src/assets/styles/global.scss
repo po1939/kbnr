@@ -3,6 +3,7 @@
 @import './home.scss';
 @import './menu.scss';
 @import './header.scss';
+@import './footer.scss';
 
 $primary-red: #EF3E56;
 
@@ -10,6 +11,17 @@ p{
     font-family: 'Open Sans', sans-serif;
 }
 
+h3{
+    font-weight: lighter;
+    color: white;
+}
+
+//Google Map Component
+
+.google-map{
+    width: 400px;
+    height: 300px;
+}
 //button
 .cta-btn{
     font-family: "Open Sans", sans-serif !important;
@@ -20,4 +32,10 @@ p{
     border-radius: 30px !important;
     box-shadow: none !important;
     font-size: 20px !important;
+    
+    &.icon-btn{
+        min-width: 0;
+        width: 30px;
+        height: 30px;
+    }
 }
