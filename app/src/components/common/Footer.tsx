@@ -59,7 +59,7 @@ const Footer: React.FC = () => {
               <div><Link to="/snack">SNACK</Link></div>
               <div />
               <div />
-              <div><Link to="/special Combo">SPECIAL COMBO</Link></div>
+              <div><Link to="/special-combo">SPECIAL COMBO</Link></div>
               <div />
             </div>
 
