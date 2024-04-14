@@ -7,6 +7,7 @@ import specialcombo from './../../assets/images/specialcombo.png';
 import entree from './../../assets/images/entree.png';
 import noodle from './../../assets/images/noodle.png';
 import boonsik from './../../assets/images/boonsik.png';
+import GoogleReviewsWidget from './GoogleCarousel';
 
 const MyComponent: React.FC = () => {
   return (
@@ -64,7 +65,6 @@ const MyComponent: React.FC = () => {
         <div className="section4text">
           <div className="section-header">Contact</div>
           <div className="s4text1">9339 Baltimore National Pike, Ellicott City, MD 21042</div>
-          <div>
           <div className="hour-container">
             <div>Wed - Mon: </div>
             <div className='time'>10 AM - 6:30 PM </div>
@@ -76,12 +76,18 @@ const MyComponent: React.FC = () => {
           <div className="call-button">
             <CTAButton to="tel:+4104569166" label="(410)456-9166" />                  
           </div>
-
         </div>  
       </div>
+      <div className="section5">
+        
+        <div className="section5text">
+          <div className="section-header">Review</div>
+          <GoogleReviewsWidget/>
+        </div>
+      </div>
     </div>
-  </div>
-  );
+    
+  );  
 };
 
 export default MyComponent;
