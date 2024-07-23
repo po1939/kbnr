@@ -1,71 +1,16 @@
 .home{
-    
-    .section-header{
-        font-family: 'Montserrat', sans-serif;
-        font-size: 38px;
-        font-weight: bold;
-        text-transform: uppercase;
-        letter-spacing: 3px;
-        padding-bottom: 30px;
-    }
-    .section-text{
-        font-family: 'Open Sans', sans-serif;
-        font-size: 18px;
-        color: black;
-        //font-weight: bold;
-        width: 80%;
-        text-align: center;
-        padding-bottom: 30px;
-    }
-    .section1 {
-        position: relative; /* Ensure the image container serves as the positioning context */
-        .image {
-          width: 100%; /* Make sure the image takes up the entire width of its container */
-          height: auto; /* Maintain the aspect ratio */
-          filter: brightness(200%);
-        }
-      
-        .text-overlay {
-            position: absolute; /* Position the text overlay relative to the image container */
-            top: 0; /* Align the text overlay to the top of the image */
-            left: 0; /* Align the text overlay to the left of the image */
-            width: 100%; /* Ensure the text overlay spans the entire width of the image */
-            height: 100%; /* Ensure the text overlay spans the entire height of the image */
-            display: flex; /* Use flexbox to center text vertically and horizontally */
-            justify-content: center; /* Center the text horizontally */
-            align-items: center; /* Center the text vertically */
-            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for better readability */
-            .section1text{
-                display: flex;
-                flex-direction: column;
-                width: 100%;
-                align-items: center;
-            
-                .s1text1 {
-                    font-family: 'Sen', sans-serif;
-                    text-transform: uppercase;
-                    color: white; /* Set text color */
-                    font-size: 20px; /* Set font size */
-                    padding-bottom: 10px;
-                }
-                .s1text2 {
-                    font-family: 'Sen', sans-serif;
-                    text-transform: uppercase;
-                    color: white; /* Set text color */
-                    font-size: 38px; /* Set font size */
-                }
-            }
-        }
-    }
     .section2{
         background-color: #F9F9F9;
         .section2text{
             display: flex;
             flex-direction: column;
-            padding-top: 100px;
-            padding-bottom: 100px;
+            padding-top: 70px;
+            padding-bottom: 70px;
+            margin: auto;
+            width: 75%;
             align-items: center;
-            
+            text-align: center;
+            gap: 30px;
         }
     }
     .section3{
@@ -74,38 +19,21 @@
             display: flex;
             flex-direction: column;
             padding-top: 100px;
-            padding-bottom: 100px;
+            padding-bottom: 30px;
+            margin: auto;
+            width: 60%;
             align-items: center;
-        
+            text-align: center;
+            gap: 30px;
         }
         .menu-navigation{
-            display: flex;
-            justify-content: center;
-            padding-bottom: 150px;
+            margin: auto;
+            width: 90%;
+            align-items: center;
+            padding-bottom: 100px;
             .menu-list{
-                display:grid;
-                grid-template-columns: fit-content(100%) fit-content(100%) fit-content(100%) fit-content(100%) fit-content(100%); /* Create grid with flexible columns */
-                gap: 200px; /* No gap between grid items */
-                .menu-item{
-                    position:relative;
-                    .menu-text-overlay{
-                        pointer-events: none;
-                        font-family: 'Open Sans', sans-serif;
-                        color: white;
-                        font-size:20px;
-                        font-weight: bold;
-                        position: absolute; /* Position the text overlay relative to the image container */
-                        top: 0; /* Align the text overlay to the top of the image */
-                        left: 0; /* Align the text overlay to the left of the image */
-                        width: 100%; /* Ensure the text overlay spans the entire width of the image */
-                        height: 100%; /* Ensure the text overlay spans the entire height of the image */
-                        display: flex; /* Use flexbox to center text vertically and horizontally */
-                        justify-content: center; /* Center the text horizontally */
-                        align-items: center; /* Center the text vertically */
-                        
-                    }
-                }
-
+                display:flex;
+                justify-content: center;
             }
         }
     }
@@ -113,30 +41,22 @@
         background-color: #F9F9F9;
         display:flex;
         flex-direction: row;
-        //align-content: center;
-        justify-content: space-evenly;
         .section4image{
-            padding:100px;
-            //width:600px;
-            //height:400px;
+            margin: auto;
         }
         .section4text{
+            margin: auto;
+            display: flex;
+            flex-direction: column;
             padding: 100px;
-            .s4text1{
-                font-family: 'Open Sans', sans-serif;
-                font-size: 16px;
-                //width: 100%;
-                //text-align: center;
-                padding-bottom: 30px;
-            }
+            gap: 30px;
             .hour-container {
                 display: flex;
-                justify-content: space-between;
+                flex-direction: column;
+                //justify-content: space-between;
                 width: 300px;
                 padding-bottom: 5px;
-
                 .time {
-                    width: 150px;
                     text-align: left;
                 }
             }
@@ -147,16 +67,12 @@
     }
     .section5{
         background-color: white;
-        
         .section5text{
-            display: flex;
-            flex-direction: column;
             padding-top: 100px;
-            padding-bottom: 100px;
-            align-items: center;
+            padding-bottom: 30px;
+            text-align: center;
+            margin: auto;
         }
     }
-    
-
 }
       

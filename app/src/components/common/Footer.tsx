@@ -19,53 +19,40 @@ const Footer: React.FC = () => {
           </div>
           <div className='footer-contents'>
             <div className="business-container">
-              <h3>Business Hours</h3>
-              <div>
-                <div className="hour-container">
-                  <div>Wed - Mon: </div>
-                  <div className='time'>10 AM - 6:30 PM </div>
-                </div>
-                <div className="hour-container">
-                  <div>Tue: </div>
-                  <div className='time'>CLOSED</div>
-                </div>
+              <h4>Business Hours</h4>
+              <div className="hour-container">
+                <footer>Wed - Mon: 10 AM - 6:30 PM</footer>
+                <footer>Tue: CLOSED</footer>
               </div>
-              <div>
-                <div className="other-text">
-                  <div>Dine In Closes 30 Minutes Prior To Closing Time</div>
-                </div>
-                <div className="other-text">
-                  <h3>(410) 456-9166</h3>
-                </div>
-              </div>
-
+              <footer>Dine In Closes 30 Minutes Prior To Closing Time</footer>
+              <footer>(410) 456-9166</footer>
+              <footer> Copyright &copy; 2024 DAALL HOUSE LLC </footer>    
             </div>
             <div className="nav-container">
-              <h3>About Us</h3>
-              <h3>Menu</h3>
-              <h3>Contact</h3>
+              <h4>About Us</h4>
+              <h4>Menu</h4>
+              <h4>Contact</h4>
               
-              <div><Link to="/our-story">OUR STORY</Link></div>
-              
-              <div><Link to="/kimbap">KIMBAP</Link></div>
+              <footer><Link to="/our-story">OUR STORY</Link></footer>
+              <footer><Link to="/kimbap">KIMBAP</Link></footer>
               <div />
-              <div><Link to="/our-promise">OUR PROMISE</Link></div>
-              <div><Link to="/entree">ENTREE</Link></div>
-              <div />
-              <div />
-              <div><Link to="/noodle">NOODLE</Link></div>
+              <footer><Link to="/our-promise">OUR PROMISE</Link></footer>
+              <footer><Link to="/entree">ENTREE</Link></footer>
               <div />
               <div />
-              <div><Link to="/snack">SNACK</Link></div>
+              <footer><Link to="/noodle">NOODLE</Link></footer>
               <div />
               <div />
-              <div><Link to="/special-combo">SPECIAL COMBO</Link></div>
+              <footer><Link to="/snack">SNACK</Link></footer>
+              <div />
+              <div />
+              <footer><Link to="/special-combo">SPECIAL COMBO</Link></footer>
               <div />
             </div>
 
             <div className="map-container">
               <GoogleMapComponent/>
-              <h3> 9339 Baltimore National Pike, Ellicott City, MD 21042</h3>
+              <footer> 9339 Baltimore National Pike, Ellicott City, MD 21042</footer>
               <div className="social-links">
                 <CTAButton to="https://www.instagram.com/kimbapnaraec/" imgSrc={instagramicon} />
                 <CTAButton to="https://www.yelp.com/biz/kim-bob-na-ra-ellicott-city-2" imgSrc={yelpicon} />                
@@ -76,9 +63,9 @@ const Footer: React.FC = () => {
           </div>
         </div>
       </footer>
-      <div className="second-box">
+      {/* <div className="second-box">
         Copyright &copy; 2024 DAALL HOUSE LLC
-      </div>
+      </div> */}
     </>
   );
 };
