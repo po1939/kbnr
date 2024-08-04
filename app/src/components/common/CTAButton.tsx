@@ -12,6 +12,7 @@ const CTAButton: React.FC<CTAButtonProps> = ({ to, label, imgSrc }: CTAButtonPro
     return (
         imgSrc ?
         <Button className="cta-btn icon-btn" href={to} variant="contained">
+            
             < img src = {imgSrc} />
         </Button>
         :

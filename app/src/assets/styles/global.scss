@@ -7,35 +7,158 @@
 
 $primary-red: #EF3E56;
 
+h1{
+    font-family: 'Sen', sans-serif;
+    text-transform: uppercase;
+    color: white; /* Set text color */
+    font-size: 38px; /* Set font size */
+    letter-spacing: 4px;
+    margin: 0;
+}
+h2{
+    font-family: 'Sen', sans-serif;
+    font-size: 38px;
+    font-weight: light;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0;
+    //padding-bottom: 30px;
+}
+h3{
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    color: white; /* Set text color */
+    font-size: 18px; /* Set font size */
+    font-weight: lighter;
+    //margin: 0;
+    //padding-bottom: 10px;
+}
+
+h4{
+    font-family: 'Montserrat', sans-serif;
+    //text-transform: uppercase;
+    color: white; /* Set text color */
+    font-size: 22px; /* Set font size */
+    font-weight: 400;
+    margin: 0;
+    //padding-bottom: 10px;
+} 
+body{
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    color: black;
+    //padding-bottom: 30px;
+    font-weight: 400;
+    //width: 80%;
+    //text-align: center;
+}
+footer{
+    font-family: "Open Sans", sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    color: white;
+    margin: 0;
+}
 p{
     font-family: 'Open Sans', sans-serif;
 }
 
-h3{
-    font-weight: lighter;
-    color: white;
-}
+// h3{
+//     font-weight: lighter;
+//     color: white;
+// }
 
 //Google Map Component
-
-.google-map{
-    width: 400px;
-    height: 300px;
+.google-map1{
+    width: 286px;
+    height: 186px;
 }
+.google-map2{
+    width: 400px;
+    height: 400px; 
+}
+
 //button
 .cta-btn{
     font-family: "Open Sans", sans-serif !important;
     color: white !important;
     background-color: #EF3E56 !important;
-    font-weight: 600 !important;
+    font-weight: 500 !important;
     text-wrap: nowrap;
     border-radius: 30px !important;
     box-shadow: none !important;
-    font-size: 20px !important;
+    font-size: 12px !important;
     
     &.icon-btn{
         min-width: 0;
         width: 30px;
         height: 30px;
     }
+}
+
+//image button
+.img-btn{
+    position: relative;
+    padding: 0;
+    min-width: auto;
+    display: inline-block; /* Ensures the image button takes up only the necessary space */
+    border: none; /* Removes any default button styling */
+    text-decoration: none; /* Ensures no underline on the link */
+    overflow: hidden; /* Ensures that the image and label do not overflow the container */
+
+    .label{
+        position: absolute;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: bold;
+        font-size: larger;
+        text-transform: none;
+        left: 50%;
+        transform: translateX(-50%);
+        color: white;
+        text-align: center;
+
+    }
+    .ripple {
+        position: absolute;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.6);
+        pointer-events: none; /* Allows clicking through the ripple */
+        transform: scale(0);
+        transition: transform 0.6s, opacity 0.6s;
+        width: 100px; /* Size of the ripple */
+        height: 100px; /* Size of the ripple */
+    }
+      &:hover .ripple {
+        transform: scale(4); /* Make the ripple effect visible */
+        opacity: 0; /* Fade out the ripple */
+      }
+}
+
+.secondheader{
+    position: relative; /* Ensure the image container serves as the positioning context */
+    .image {
+        width: 100%; /* Make sure the image takes up the entire width of its container */
+        height: auto; /* Maintain the aspect ratio */
+        filter: brightness(200%);
+    }
+    .text-overlay {
+        position: absolute; /* Position the text overlay relative to the image container */
+        top: 0; /* Align the text overlay to the top of the image */
+        left: 0; /* Align the text overlay to the left of the image */
+        width: 100%; /* Ensure the text overlay spans the entire width of the image */
+        height: 100%; /* Ensure the text overlay spans the entire height of the image */
+        display: flex; /* Use flexbox to center text vertically and horizontally */
+        justify-content: center; /* Center the text horizontally */
+        align-items: center; /* Center the text vertically */
+        background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for better readability */
+        .text{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            align-items: center;
+            margin-top: 0px;
+            //gap: 10px;
+        }
+    }
+
 }

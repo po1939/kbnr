@@ -1,12 +1,11 @@
 import React from 'react';
-
+import SecondHeader from './../../components/common/SecondHeader';
 const MyComponent: React.FC = () => {
   return (
-    <div>
-      <h1>Hello, this is MyComponent!</h1>
-      {/* Add your component content here */}
+    <div className='about'>
+      <SecondHeader/>
     </div>
-  );
+    );
 };
 
 export default MyComponent;
