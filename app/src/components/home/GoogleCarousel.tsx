@@ -15,7 +15,7 @@ const GoogleReviewsWidget: React.FC = () => {
   return (
     <div>
       {/* Replace 'YOUR_WIDGET_ID' with your actual Elfsight widget ID */}
-      <div className="elfsight-app-2310e19a-030c-476d-8162-1b38a3468ced"data-elfsight-app-lazy></div>
+      <div className="elfsight-app-2310e19a-030c-476d-8162-1b38a3468ced review-widget"data-elfsight-app-lazy></div>
     </div>
   );
 };
