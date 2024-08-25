@@ -22,7 +22,6 @@ h2{
     text-transform: uppercase;
     letter-spacing: 2px;
     margin: 0;
-    //padding-bottom: 30px;
 }
 h3{
     font-family: 'Montserrat', sans-serif;
@@ -30,27 +29,20 @@ h3{
     color: white; /* Set text color */
     font-size: 18px; /* Set font size */
     font-weight: lighter;
-    //margin: 0;
-    //padding-bottom: 10px;
 }
 
 h4{
     font-family: 'Montserrat', sans-serif;
-    //text-transform: uppercase;
     color: white; /* Set text color */
     font-size: 22px; /* Set font size */
     font-weight: 400;
     margin: 0;
-    //padding-bottom: 10px;
 } 
 body{
     font-family: "Open Sans", sans-serif;
     font-size: 16px;
     color: black;
-    //padding-bottom: 30px;
     font-weight: 400;
-    //width: 80%;
-    //text-align: center;
 }
 footer{
     font-family: "Open Sans", sans-serif;
@@ -61,21 +53,6 @@ footer{
 }
 p{
     font-family: 'Open Sans', sans-serif;
-}
-
-// h3{
-//     font-weight: lighter;
-//     color: white;
-// }
-
-//Google Map Component
-.google-map1{
-    width: 286px;
-    height: 186px;
-}
-.google-map2{
-    width: 400px;
-    height: 400px; 
 }
 
 //button
@@ -94,6 +71,10 @@ p{
         width: 30px;
         height: 30px;
     }
+}
+
+.google-map {
+    border:none;
 }
 
 //image button
@@ -139,6 +120,7 @@ p{
     .image {
         width: 100%; /* Make sure the image takes up the entire width of its container */
         height: auto; /* Maintain the aspect ratio */
+        vertical-align: middle;
         filter: brightness(200%);
     }
     .text-overlay {
@@ -157,7 +139,6 @@ p{
             width: 100%;
             align-items: center;
             margin-top: 0px;
-            //gap: 10px;
         }
     }
 

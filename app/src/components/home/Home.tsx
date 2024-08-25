@@ -1,7 +1,6 @@
 import React from 'react';
 import SecondHeader from './../../components/common/SecondHeader';
 import CTAButton from './../../components/common/CTAButton';
-import googlemap from './../../assets/images/googlemap.png';
 import kimbap from './../../assets/images/kimbap.png';
 import specialcombo from './../../assets/images/specialcombo.png';
 import entree from './../../assets/images/entree.png';
@@ -9,7 +8,7 @@ import noodle from './../../assets/images/noodle.png';
 import boonsik from './../../assets/images/boonsik.png';
 import GoogleReviewsWidget from './GoogleCarousel';
 import MyImageButton from '../common/ImageButton';
-import GoogleMapComponent from './GoogleMap';
+import GoogleMapsEmbed from '../common/GoogleMap';
 
 const MyComponent: React.FC = () => {
   return (
@@ -40,10 +39,8 @@ const MyComponent: React.FC = () => {
       </div>
     </div>
       <div className="section4">
-        <div className="section4image">
-          <GoogleMapComponent/>
+          <GoogleMapsEmbed/>
            
-        </div>
         <div className="section4text">
           <h2>Contact</h2>
           <body>9339 Baltimore National Pike, Ellicott City, MD 21042</body>
