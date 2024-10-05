@@ -6,7 +6,13 @@
 @import "./footer.scss";
 
 $primary-red: #ef3e56;
+main{
+  margin-top: 107px;
+}
 
+.about,.contact{
+  margin-top: 10rem;
+}
 h1 {
   font-family: "Sen", sans-serif;
   text-transform: uppercase;
