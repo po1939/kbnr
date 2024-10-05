@@ -41,6 +41,8 @@ h4 {
   margin: 0;
 }
 p {
+  max-width: 100ch;
+  margin: auto;
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
   color: black;
@@ -48,7 +50,7 @@ p {
 }
 footer {
   font-family: "Open Sans", sans-serif;
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 300;
   color: white;
   margin: 0;
@@ -58,16 +60,28 @@ footer {
   max-width: 1600px;
   margin: auto;
 }
+
+.white-bg {
+  background-color: white !important;
+}
+
 //button
 .cta-btn {
   font-family: "Open Sans", sans-serif !important;
   color: white !important;
   background-color: #ef3e56 !important;
-  font-weight: 500 !important;
+  font-weight: 600 !important;
   text-wrap: nowrap;
   border-radius: 30px !important;
   box-shadow: none !important;
-  font-size: 12px !important;
+  font-size: 18px !important;
+  padding: 11px 35px !important;
+  &.icon {
+    padding: 0 !important;
+  }
+  &:hover {
+    background-color: #a72e3e !important;
+  }
 
   &.icon-btn {
     min-width: 0;
@@ -121,8 +135,9 @@ footer {
   position: relative; /* Ensure the image container serves as the positioning context */
   .image {
     width: 100%; /* Make sure the image takes up the entire width of its container */
-    height: auto; /* Maintain the aspect ratio */
+    height: 400px; /* Maintain the aspect ratio */
     vertical-align: middle;
+    object-fit: cover;
     filter: brightness(200%);
   }
   .text-overlay {

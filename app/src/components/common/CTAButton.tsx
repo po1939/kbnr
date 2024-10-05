@@ -3,15 +3,16 @@ import Button from '@mui/material/Button';
 
 interface CTAButtonProps {
     to: string;
+    className?: string;
     label?: string | null;
     imgSrc?: string | null;
     // Add more props as needed
 }
 
-const CTAButton: React.FC<CTAButtonProps> = ({ to, label, imgSrc }: CTAButtonProps) => {
+const CTAButton: React.FC<CTAButtonProps> = ({ to, label, className, imgSrc }: CTAButtonProps) => {
     return (
         imgSrc ?
-        <Button className="cta-btn icon-btn" href={to} variant="contained">
+        <Button className={`${className} cta-btn icon-btn`} href={to} variant="contained">
             
             < img src = {imgSrc} />
         </Button>
