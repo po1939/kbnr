@@ -41,6 +41,11 @@
         }
       }
     }
+
+    h2 ~ p {
+        max-width: 1200px;
+        margin: auto;
+    }
   }
 
   .review-hide {

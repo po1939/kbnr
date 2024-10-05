@@ -18,7 +18,7 @@ const MyComponent: React.FC = () => {
         <div className="container">
           <h2>About Us</h2>
           <p>
-            We take pride in delivering an authentic Korean culinary experience.
+            We take pride in delivering an authentic Korean culinary experience.<br/>
             Our promises to you are as carefully crafted as our delicious Korean
             food, ensuring a dining adventure that goes beyond your
             expectations!
@@ -33,7 +33,7 @@ const MyComponent: React.FC = () => {
           <h2>Menu</h2>
           <p>
             Kimbap (김밥) is a popular Korean dish, featuring seaweed rice rolls
-            filled with diverse ingredients. Translating to "seaweed rice" in
+            filled with diverse ingredients. <br/> Translating to "seaweed rice" in
             Korean, kimbap is often likened to Korean sushi, boasting unique
             flavors and ingredients.
           </p>
