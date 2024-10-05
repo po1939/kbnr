@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logo from './../../assets/images/kimbapnara.svg';
+import logo from './../../assets/icons/kimbapnara.svg';
 import CTAButton from './CTAButton';
 
 const Header: React.FC = () => {

@@ -1,40 +1,79 @@
-.about{
-    .section1{
-        display: flex;
-        flex-direction:row;
-        padding: 50px;
-        align-items: center;
-        gap: 62px;
-        .section1text{
-            display: flex;
-            flex-direction: column;
-            margin: auto;
-            gap: 30px;
-            max-width: 600px;
-        }
-        .section1image img{
-            width: 100%;
-            height: auto;
-        }
+.about {
+ 
+  .image-text-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 62px;
+  
+    img {
+      width: 50vw;
+      height: 500px;
+      object-fit: cover;
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
+      border-radius: 20px;
+
     }
-    .section2{
-        display: flex;
-        flex-direction:row;
-        padding: 50px;
-        align-items: center;
-        gap: 62px;
-        .section2text{
-            display: flex;
-            flex-direction: column;
-            margin: auto;
-            gap: 30px;
-            max-width: 600px;
-        }
-        .section2image img{
-            width: 100%;
-            height: auto;
-        }
+    h3 {
+      font-size: 26px;
+      color: black;
+      font-weight: 600;
     }
-        
-    
+    .text-container {
+      max-width: 50%;
+      padding-right: 3rem;
+    }
+
+    // .section1text {
+    //   display: flex;
+    //   flex-direction: column;
+    //   margin: auto;
+    //   gap: 30px;
+    //   max-width: 600px;
+    // }
+    // .section1image img {
+    //   width: 100%;
+    //   height: auto;
+    // }
+
+    &.reverse {
+        flex-direction: row-reverse;
+        img {
+          border-top-left-radius: 20px;
+          border-bottom-left-radius: 20px;
+          border-top-right-radius: 0;
+          border-bottom-right-radius: 0;
+          border-radius: 20px;
+        }
+        .text-container{
+          padding-left: 3rem;
+          padding-right: 0;
+        }
+      }
+
+  }
+  .container{
+    .image-text-container.reverse .text-container{
+        padding-left: 0;
+    }
+  }
+//   .section2 {
+//     display: flex;
+//     flex-direction: row;
+//     padding: 50px;
+//     align-items: center;
+//     gap: 62px;
+//     .section2text {
+//       display: flex;
+//       flex-direction: column;
+//       margin: auto;
+//       gap: 30px;
+//       max-width: 600px;
+//     }
+//     .section2image img {
+//       width: 100%;
+//       height: auto;
+//     }
+//   }
 }

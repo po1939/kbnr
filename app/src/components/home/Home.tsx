@@ -17,7 +17,7 @@ const MyComponent: React.FC = () => {
       <div className="section2">
         <div className="section2text">
           <h2>At Kim Bap Na Ra</h2>
-          <body>We take pride in delivering an authentic Korean culinary experience. Our promises to you are as carefully crafted as our delicious Korean food, ensuring a dining adventure that goes beyond your expectations!</body>
+          <p>We take pride in delivering an authentic Korean culinary experience. Our promises to you are as carefully crafted as our delicious Korean food, ensuring a dining adventure that goes beyond your expectations!</p>
           <div> <CTAButton to="/about" label="Learn More" /> </div>
         </div>
         
@@ -25,7 +25,7 @@ const MyComponent: React.FC = () => {
       <div className="section3">
         <div className="section3text">
           <h2>Menu</h2>
-          <body>Kimbap (김밥) is a popular Korean dish, featuring seaweed rice rolls filled with diverse ingredients. Translating to "seaweed rice" in Korean, kimbap is often likened to Korean sushi, boasting unique flavors and ingredients.</body>
+          <p>Kimbap (김밥) is a popular Korean dish, featuring seaweed rice rolls filled with diverse ingredients. Translating to "seaweed rice" in Korean, kimbap is often likened to Korean sushi, boasting unique flavors and ingredients.</p>
         </div>
       
       <div className="menu-navigation">
@@ -43,11 +43,11 @@ const MyComponent: React.FC = () => {
            
         <div className="section4text">
           <h2>Contact</h2>
-          <body>9339 Baltimore National Pike, Ellicott City, MD 21042</body>
+          <p>9339 Baltimore National Pike, Ellicott City, MD 21042</p>
           <div className="hour-container">
             <div className="time">
-              <body>Wed - Mon: 10 AM - 6:30 PM</body>
-              <body>Tue: CLOSED</body>
+              <p>Wed - Mon: 10 AM - 6:30 PM</p>
+              <p>Tue: CLOSED</p>
             </div>
           </div>
           <div className="call-button">

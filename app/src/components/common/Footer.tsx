@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logo from './../../assets/images/kimnafooter.svg';
+import logo from './../../assets/icons/kimnafooter.svg';
 import GoogleMapComponent from './GoogleMap';
 import CTAButton from './CTAButton';
-import instagramicon from './../../assets/images/instagramicon.svg';
-import yelpicon from './../../assets/images/yelpicon.svg';
+import instagramicon from './../../assets/icons/instagramicon.svg';
+import yelpicon from './../../assets/icons/yelpicon.svg';
 
 
 const Footer: React.FC = () => {
