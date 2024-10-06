@@ -76,6 +76,20 @@
         .menu-item-image {
             max-width: 200px;
             height: auto;
+            max-height: 200px;
+        }
+
+        .menu-item-second-image{
+            max-width: 200px;
+            height: auto;
+            max-height: 200px; 
+            padding-left: 3rem;  
+        }
+        
+        .menu-item-third-image{
+            max-width: 200px;
+            height: auto;
+            max-height: 200px;
         }
 
         .label {
@@ -84,6 +98,7 @@
         }
 
         label {
+            padding-top: 0.5rem;
             text-transform: uppercase;
             font-size: 26px;
             font-weight: 600;

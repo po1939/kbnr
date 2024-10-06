@@ -32,10 +32,10 @@ const MyComponent: React.FC = () => {
       <div className="menu-navigation">
         <div className="menu-list">
           <MyImageButton src={kimbap} to="/menu" label="Kimbap" />
-          <MyImageButton src={specialcombo} to="/menu" label="Special Combo" />
           <MyImageButton src={entree} to="/menu" label="Entree" />
           <MyImageButton src={noodle} to="/menu" label="Noodle" />
           <MyImageButton src={boonsik} to="/menu" label="Boonsik" />
+          <MyImageButton src={specialcombo} to="/menu" label="Special Combo" />
         </div>
       </div>
     </div>

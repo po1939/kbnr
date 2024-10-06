@@ -2,9 +2,12 @@ import React from 'react';
 
 interface MenuItem {
   image: string;
+  secondImage?: string;
+  thirdImage?: string;
   label: string;
-  icon: string;
-  description: string;
+  icon?: string;
+  secondIcon?: string;
+  description?: string;
   price: string;
 }
 
@@ -25,12 +28,33 @@ export default function MenuItemCard({ items, columns = 2 }: MenuItemCardProps) 
     >
       {items.map((item, index) => (
         <div key={index} className="menu-item-card">
+          {/* Display three images in single-column layout */}
+          {columns === 1 && item.secondImage && item.thirdImage ? (
+            <div className="three-images">
+              <img src={item.image} alt={item.label} className="menu-item-image" />
+              <img src={item.secondImage} alt={`${item.label} second image`} className="menu-item-second-image" />
+              <img src={item.thirdImage} alt={`${item.label} third image`} className="menu-item-third-image" />
+            </div>
+          ) : columns === 1 && item.secondImage ? (
+            <div className="two-images">
+              <img src={item.image} alt={item.label} className="menu-item-image" />
+              <img src={item.secondImage} alt={`${item.label} second image`} className="menu-item-second-image" />
+            </div>
+          ) : (
           <img src={item.image} alt={item.label} className="menu-item-image" />
+          )}
           <div className="label">
             <label>{item.label}</label>
-            <img src={item.icon} alt={`${item.label} icon`} className="menu-item-icon" />
+            {item.icon && (
+              <img src={item.icon} alt={`${item.label} icon`} className="menu-item-icon" />
+            )}
+            
+            {/* Conditionally render second icon */}
+            {item.secondIcon && (
+              <img src={item.secondIcon} alt={`${item.label} second icon`} className="menu-item-second-icon" />
+            )}
           </div>
-          <p>{item.description}</p>
+          {item.description && <p>{item.description}</p>}
           <b>{item.price}</b>
         </div>
       ))}
