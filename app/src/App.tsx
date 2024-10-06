@@ -1,6 +1,7 @@
 // Import necessary dependencies
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import './assets/styles/global.scss';
 
@@ -10,7 +11,7 @@ import Footer from './components/common/Footer';
 import Home from './components/home/Home';
 import About from './components/about/About';
 import Menu from './components/menu/Menu';
-import Contact from './components/contact/Contact';
+import { Contact } from './components/contact/Contact';
 
 // Main App component
 const App: React.FC = () => {

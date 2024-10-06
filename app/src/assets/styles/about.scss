@@ -1,59 +1,79 @@
-.about{
-    
-    .section-header{
-        font-family: 'Montserrat', sans-serif;
-        font-size: 38px;
-        font-weight: bold;
-        text-transform: uppercase;
-        letter-spacing: 3px;
-        padding-bottom: 30px;
+.about {
+ 
+  .image-text-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 62px;
+  
+    img {
+      width: 50vw;
+      height: 500px;
+      object-fit: cover;
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
+      border-radius: 20px;
+
     }
-    .section-text{
-        font-family: 'Open Sans', sans-serif;
-        font-size: 18px;
-        color: black;
-        //font-weight: bold;
-        width: 80%;
-        text-align: center;
-        padding-bottom: 30px;
+    h3 {
+      font-size: 26px;
+      color: black;
+      font-weight: 600;
     }
-    .section1 {
-        position: relative; /* Ensure the image container serves as the positioning context */
-        .image {
-          width: 100%; /* Make sure the image takes up the entire width of its container */
-          height: auto; /* Maintain the aspect ratio */
-          filter: brightness(200%);
+    .text-container {
+      max-width: 50%;
+      padding-right: 3rem;
+    }
+
+    // .section1text {
+    //   display: flex;
+    //   flex-direction: column;
+    //   margin: auto;
+    //   gap: 30px;
+    //   max-width: 600px;
+    // }
+    // .section1image img {
+    //   width: 100%;
+    //   height: auto;
+    // }
+
+    &.reverse {
+        flex-direction: row-reverse;
+        img {
+          border-top-left-radius: 20px;
+          border-bottom-left-radius: 20px;
+          border-top-right-radius: 0;
+          border-bottom-right-radius: 0;
+          border-radius: 20px;
         }
-      
-        .text-overlay {
-            position: absolute; /* Position the text overlay relative to the image container */
-            top: 0; /* Align the text overlay to the top of the image */
-            left: 0; /* Align the text overlay to the left of the image */
-            width: 100%; /* Ensure the text overlay spans the entire width of the image */
-            height: 100%; /* Ensure the text overlay spans the entire height of the image */
-            display: flex; /* Use flexbox to center text vertically and horizontally */
-            justify-content: center; /* Center the text horizontally */
-            align-items: center; /* Center the text vertically */
-            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for better readability */
-            .section1text{
-                display: flex;
-                flex-direction: column;
-                width: 100%;
-                align-items: center;
-            }
-            .s1text1 {
-                font-family: 'Sen', sans-serif;
-                text-transform: uppercase;
-                color: white; /* Set text color */
-                font-size: 20px; /* Set font size */
-                padding-bottom: 10px;
-            }
-            .s1text2 {
-                font-family: 'Sen', sans-serif;
-                text-transform: uppercase;
-                color: white; /* Set text color */
-                font-size: 38px; /* Set font size */
-            }
+        .text-container{
+          padding-left: 3rem;
+          padding-right: 0;
         }
+      }
+
+  }
+  .container{
+    .image-text-container.reverse .text-container{
+        padding-left: 0;
     }
+  }
+//   .section2 {
+//     display: flex;
+//     flex-direction: row;
+//     padding: 50px;
+//     align-items: center;
+//     gap: 62px;
+//     .section2text {
+//       display: flex;
+//       flex-direction: column;
+//       margin: auto;
+//       gap: 30px;
+//       max-width: 600px;
+//     }
+//     .section2image img {
+//       width: 100%;
+//       height: auto;
+//     }
+//   }
 }
