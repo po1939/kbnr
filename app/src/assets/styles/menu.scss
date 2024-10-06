@@ -1,0 +1,108 @@
+.menu {
+    .nav-tab {
+        padding: 2rem;
+        position: -webkit-sticky;
+        position: sticky;
+        top: -2px;
+        margin-top: .25rem;
+        background: white;
+
+        .container {
+            display: flex;
+            margin: auto;
+            width: 860px;
+            justify-content: space-between;
+
+            a {
+                padding-bottom: 11px;
+                text-decoration: none;
+                text-transform: uppercase;
+                font-size: 18px;
+                font-weight: 500;
+                font-family: 'Montserrat', sans-serif;
+                color: black;
+                position: relative;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    height: 3px;
+                    background-color: #EF3E56;
+                    transform: scaleX(0);
+                    transform-origin: bottom right;
+                    transition: transform 0.3s ease;
+                }
+
+                &:hover::after,
+                &:active::after {
+                    transform: scaleX(1);
+                    transform-origin: bottom left;
+                }
+            }
+        }
+    }
+}
+
+.sticky-top {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
+.menu-content {
+    padding: 1rem 3rem 3rem;
+    max-width: 1200px;
+    margin: auto;
+
+    .legends {
+        justify-content: flex-end;
+    }
+
+    .menu-item-card-grid {
+        display: grid;
+        gap: 1rem;
+    }
+
+    .menu-item-card {
+        padding: 2rem;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .menu-item-image {
+            max-width: 200px;
+            height: auto;
+            max-height: 200px;
+        }
+
+        .menu-item-second-image{
+            max-width: 200px;
+            height: auto;
+            max-height: 200px; 
+            padding-left: 3rem;  
+        }
+        
+        .menu-item-third-image{
+            max-width: 200px;
+            height: auto;
+            max-height: 200px;
+        }
+
+        .label {
+            display: flex;
+            align-items: center;
+        }
+
+        label {
+            padding-top: 0.5rem;
+            text-transform: uppercase;
+            font-size: 26px;
+            font-weight: 600;
+            font-family: 'Montserrat', sans-serif;
+        }
+    }
+}
