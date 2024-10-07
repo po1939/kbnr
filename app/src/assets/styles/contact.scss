@@ -1,9 +1,10 @@
 .contact-page {
   display: flex;
   flex-direction: row;
-  h2 {
+  h1 {
     margin-bottom: 1rem;
   }
+  p{text-align: left;}
   .contact-info {
     display: flex;
     flex-wrap: wrap;
@@ -13,7 +14,10 @@
       display: flex;
       gap: 20px;
       margin-right: 50px;
-      text-wrap: nowrap;
+      text-wrap: wrap;
+      img{
+        width: 22px;
+      }
     }
   }
 

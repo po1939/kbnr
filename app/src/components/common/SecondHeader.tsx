@@ -8,6 +8,8 @@ const SecondHeader: React.FC = () => {
         autoPlay
         muted
         loop
+        playsInline
+        preload="auto"
         id="hero-video-bg"
         title="Background video showcasing kimbap prepairing"
       >
