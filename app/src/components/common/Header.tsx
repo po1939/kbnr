@@ -50,7 +50,7 @@ const Header: React.FC = () => {
             </Link>
           </li>
           <li>
-            <CTAButton to="tel:+4104569166" label="(410)456-9166" />
+            <CTAButton to="tel:+14104569166" label="(410)456-9166" />
           </li>
         </ul>
       </nav>

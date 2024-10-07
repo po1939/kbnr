@@ -31,7 +31,7 @@ export default function MenuItemCard({
     >
       {items.map((item, index) => {
         const isKimbap = item.image.includes("kimbap");
-        console.log("item is:", item.image, isKimbap);
+        // console.log("item is:", item.image, isKimbap);
 
         return (
           <div

@@ -8,6 +8,7 @@
 
 html {
   scroll-behavior: smooth;
+  overscroll-behavior: none; /* Prevent scroll chaining and bounce effects */
 }
 main {
   margin-top: $header-height;
@@ -200,6 +201,7 @@ li:has(a) {
   }
 }
 
+
 //media query
 /* 1. Mobile Portrait (0px - 480px) */
 @media (max-width: 480px) {
@@ -207,6 +209,9 @@ li:has(a) {
   body,
   label {
     font-size: 14px !important;
+  }
+  .nav-container {
+    flex-wrap: wrap;
   }
 }
 
@@ -250,6 +255,32 @@ li:has(a) {
   }
 }
 
+// @media (min-width: 1199.9px) {
+//   .hide-mobile{
+//     display: block;
+//   }
+  
+//   .hide-desktop{
+//     display: none;
+//   }
+// }
+
+// @media (max-width: 1199.8px) {
+//   .hide-mobile{
+//     display: none;
+//   }
+  
+//   .hide-desktop{
+//     display: block;
+//   }
+// }
+@media (max-width: 1023px) {
+  .logo:not(.footer.logo) {
+    img:last-of-type {
+      display: none;
+    }
+  }
+}
 @media (max-width: 768px) {
   a,
   p,
@@ -258,10 +289,15 @@ li:has(a) {
   h4:not(footer h4) {
     text-align: center;
   }
-  .logo {
-    img:last-of-type {
-      display: none;
+  .legends {
+    justify-content: center !important;
+    align-items: center !important;
+    p {
+      text-wrap: nowrap;
     }
+  }
+  .menu-content {
+    padding: 1rem !important;
   }
   .about-page .image-text-container .text-container {
     padding-right: 0;
@@ -274,11 +310,10 @@ li:has(a) {
   }
 }
 
-
 //scrollbar
 /* Styling the scrollbar */
 ::-webkit-scrollbar {
-  width: 8px; 
+  width: 8px;
   height: 8px;
 }
 
@@ -300,10 +335,10 @@ li:has(a) {
 /* Handle on hover (the scrolling thumb when hovered) */
 ::-webkit-scrollbar-thumb:hover {
   background-color: rgba(0, 0, 0, 0.25); /* Slightly darker on hover */
-
 }
 
 /* Optional: Set scrollbar for horizontal scrolling */
 ::-webkit-scrollbar-horizontal {
-  height: 2px; /* Horizontal scrollbar height */
+  height: 6px; /* Horizontal scrollbar height */
 }
+

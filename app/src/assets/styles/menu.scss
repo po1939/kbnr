@@ -19,6 +19,13 @@
       max-width: 860px;
       justify-content: space-between;
 
+      @media (max-width: 768px) {
+        gap: 1.5rem;
+        width: fit-content !important;
+        max-width: fit-content;
+        justify-content: flex-start;
+      }
+
       a {
         padding-bottom: 11px;
         text-decoration: none;
@@ -28,7 +35,9 @@
         font-family: "Montserrat", sans-serif;
         color: black;
         position: relative;
-
+        &.special-combo {
+          text-wrap: nowrap;
+        }
         &::after {
           content: "";
           position: absolute;
@@ -86,7 +95,8 @@
       }
     }
     .menu-item-icon {
-      width: 22px;
+      min-width: 22px;
+      max-width: 22px;
     }
 
     .menu-item-card {
@@ -99,6 +109,13 @@
       &.fishcake {
         img {
           margin-right: -8px;
+        }
+      }
+      @media (max-width: 768px) {
+        &.fishcake {
+          img {
+            margin: auto;
+          }
         }
       }
       .kimbap-image {
@@ -121,6 +138,11 @@
         display: flex;
         align-items: center;
         gap: 0.5rem;
+        @media (max-width: 768px) {
+          label {
+            flex-grow: 1; /* This makes the label take up the remaining space */
+          }
+        }
       }
 
       label {

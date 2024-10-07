@@ -71,7 +71,7 @@ const Footer: React.FC = () => {
     <>
       <footer>
         <div className="container">
-          <div className="logo">
+          <div className="logo footer">
             <a href="/">
               <img src={logo} alt='kimbapnara-logo'/>
             </a>
@@ -85,9 +85,6 @@ const Footer: React.FC = () => {
               </div>
               <div>Dine In Closes 30 Minutes Prior To Closing Time</div>
               <div>(410) 456-9166</div>
-              <div style={{ marginTop: "auto" }}>
-                Copyright &copy; 2024 DAALL HOUSE LLC
-              </div>
             </div>
             <div className="nav-container">
               {navLinks.map((section, index) => (
@@ -135,6 +132,9 @@ const Footer: React.FC = () => {
                 />
               </div>
             </div>
+            <div className="hide-desktop" style={{ marginTop: "auto" }}>
+                Copyright &copy; 2024 DAALL HOUSE LLC
+              </div>
           </div>
         </div>
       </footer>

@@ -66,7 +66,7 @@ const MyComponent: React.FC = () => {
             <p>Tue: CLOSED</p>
 
             <div className="call-button">
-              <CTAButton to="tel:+4104569166" label="(410)456-9166" />
+              <CTAButton to="tel:+14104569166" label="(410)456-9166" />
             </div>
           </div>
         </div>
