@@ -9,7 +9,7 @@ import boonsik from "./../../assets/images/boonsik.png";
 import GoogleReviewsWidget from "./GoogleCarousel";
 import MyImageButton from "../common/ImageButton";
 import GoogleMapsEmbed from "../common/GoogleMap";
-
+import MoveToTop from "../common/MoveToTop";
 
 const MyComponent: React.FC = () => {
   return (
@@ -19,7 +19,7 @@ const MyComponent: React.FC = () => {
         <div className="container">
           <h2>About Us</h2>
           <p>
-            We take pride in delivering an authentic Korean culinary experience.<br/>
+            We take pride in delivering an authentic Korean culinary experience.
             Our promises to you are as carefully crafted as our delicious Korean
             food, ensuring a dining adventure that goes beyond your
             expectations!
@@ -34,9 +34,9 @@ const MyComponent: React.FC = () => {
           <h2>Menu</h2>
           <p>
             Kimbap (김밥) is a popular Korean dish, featuring seaweed rice rolls
-            filled with diverse ingredients. <br/> Translating to "seaweed rice" in
-            Korean, kimbap is often likened to Korean sushi, boasting unique
-            flavors and ingredients.
+            filled with diverse ingredients. Translating to "seaweed
+            rice" in Korean, kimbap is often likened to Korean sushi, boasting
+            unique flavors and ingredients.
           </p>
 
           <div className="menu-navigation">
@@ -62,12 +62,9 @@ const MyComponent: React.FC = () => {
           <div className="text-container">
             <h2>Contact</h2>
             <p>9339 Baltimore National Pike, Ellicott City, MD 21042</p>
-            <div className="hour-container">
-              <div className="time">
-                <p>Wed - Mon: 10 AM - 6:30 PM</p>
-                <p>Tue: CLOSED</p>
-              </div>
-            </div>
+            <p>Wed - Mon: 10 AM - 6:30 PM</p>
+            <p>Tue: CLOSED</p>
+
             <div className="call-button">
               <CTAButton to="tel:+4104569166" label="(410)456-9166" />
             </div>
@@ -81,6 +78,7 @@ const MyComponent: React.FC = () => {
         </div>
         <div className="review-hide"></div>
       </div>
+      <MoveToTop />
     </div>
   );
 };

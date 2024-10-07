@@ -1,6 +1,4 @@
 //Header
-$text-black: #000000;
-$primary-red: #ef3e56;
 
 .header {
   font-family: "Montserrat", sans-serif;
@@ -14,14 +12,22 @@ $primary-red: #ef3e56;
     width: 100%;
     background: white;
     z-index: 100;
+    .logo a {
+      display: flex;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      align-items: center;
+      gap: 0.5rem;
+    }
   }
   ul {
     list-style-type: none;
     display: flex;
     align-items: center;
     margin-bottom: 0;
+    gap: 3rem;
     li {
-      margin-left: 80px;
+      // margin-left: 80px;
       a {
         text-decoration: none;
         color: $text-black;

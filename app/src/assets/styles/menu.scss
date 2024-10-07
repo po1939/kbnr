@@ -2,7 +2,7 @@
   .nav-tab {
     padding: 1.5rem;
     margin-top: 0.25rem;
-    background:#F9F9F9;
+    background: #f9f9f9;
     &.sticky-top {
       position: -webkit-sticky;
       position: sticky;
@@ -10,7 +10,7 @@
       z-index: 99;
     }
 
-    .container {
+    .container.nav-tab-container {
       display: flex;
       margin: auto;
       width: 860px;
@@ -33,7 +33,7 @@
           right: 0;
           bottom: 0;
           height: 3px;
-          background-color: #ef3e56;
+          background-color: $primary-red;
           transform: scaleX(0);
           transform-origin: bottom right;
           transition: transform 0.3s ease;
@@ -52,13 +52,11 @@
     &:target {
       scroll-margin-top: 230px;
     }
-   
   }
 
-  h4 {
+  h3 {
     text-align: center;
     font-weight: 900 !important;
-    font-size: 32px !important;
     color: black !important;
     text-transform: uppercase;
     margin-bottom: 1rem !important;
@@ -71,11 +69,16 @@
 
     .legends {
       justify-content: flex-end;
+      margin-bottom: 1rem;
     }
 
     .menu-item-card-grid {
       display: grid;
       gap: 3rem !important;
+
+      @media (max-width: 768px) {
+        grid-template-columns: repeat(1, 1fr) !important;
+      }
     }
     .menu-item-icon {
       width: 22px;
@@ -88,11 +91,11 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-        &.fishcake{
-            img{
-                margin-right: -8px;
-            }
+      &.fishcake {
+        img {
+          margin-right: -8px;
         }
+      }
       .kimbap-image {
         padding: 5px;
       }
@@ -101,6 +104,7 @@
       .three-images {
         gap: 1rem;
         display: flex;
+        flex-wrap: wrap;
       }
 
       .menu-item-image {

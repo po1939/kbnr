@@ -1,16 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "./../../assets/icons/kimnafooter.svg";
+import logo from "./../../assets/images/kimnafooter.png";
 import GoogleMapComponent from "./GoogleMap";
 import CTAButton from "./CTAButton";
 import instagramicon from "./../../assets/icons/instagramicon.svg";
 import yelpicon from "./../../assets/icons/yelpicon.svg";
+import { HashLink } from "react-router-hash-link";
+import { scrollWithOffset, scrollWithOffsetAboutPage } from "../../utils/scrollWithOffset";
 
 const Footer: React.FC = () => {
   return (
     <>
       <footer>
-        <div className="footer-container">
+        <div className="container">
           <div className="logo">
             <a href="/">
               <img src={logo} />
@@ -25,49 +27,66 @@ const Footer: React.FC = () => {
               </div>
               <div>Dine In Closes 30 Minutes Prior To Closing Time</div>
               <div>(410) 456-9166</div>
-              <div> Copyright &copy; 2024 DAALL HOUSE LLC </div>
+              <div style={{ marginTop: "auto" }}>
+                Copyright &copy; 2024 DAALL HOUSE LLC{" "}
+              </div>
             </div>
             <div className="nav-container">
-              <h4>About Us</h4>
-              <h4>Menu</h4>
-              <h4>Contact</h4>
-
-              <div>
-                <Link to="/our-story">OUR STORY</Link>
+              <div className="footer-nav-group">
+                <Link to="/about">
+                  <h4>About Us</h4>
+                </Link>
+                <HashLink
+                  smooth
+                  scroll={scrollWithOffsetAboutPage}
+                  to="/about#our-story"
+                >
+                  OUR STORY
+                </HashLink>
+                <HashLink
+                  smooth
+                  scroll={scrollWithOffsetAboutPage}
+                  to="/about#our-promise"
+                >
+                  OUR PROMISE
+                </HashLink>
               </div>
-              <div>
-                <Link to="/kimbap">KIMBAP</Link>
+              <div className="footer-nav-group">
+                <Link to="/menu">
+                  <h4>Menu</h4>
+                </Link>
+                <HashLink smooth scroll={scrollWithOffset} to="/menu#kimbap">
+                  KIMBAP
+                </HashLink>
+                <HashLink smooth scroll={scrollWithOffset} to="/menu#entree">
+                  ENTREE
+                </HashLink>
+                <HashLink smooth scroll={scrollWithOffset} to="/menu#noodle">
+                  NOODLE
+                </HashLink>
+                <HashLink smooth scroll={scrollWithOffset} to="/menu#snack">
+                  SNACK
+                </HashLink>
+                <HashLink
+                  smooth
+                  scroll={scrollWithOffset}
+                  to="/menu#special-combo"
+                >
+                  SPECIAL
+                  <br />
+                  COMBO
+                </HashLink>
               </div>
-              <div />
-              <div>
-                <Link to="/our-promise">OUR PROMISE</Link>
+              <div className="footer-nav-group">
+                <Link to="/contact">
+                  <h4>Contact</h4>
+                </Link>
               </div>
-              <div>
-                <Link to="/entree">ENTREE</Link>
-              </div>
-              <div />
-              <div />
-              <div>
-                <Link to="/noodle">NOODLE</Link>
-              </div>
-              <div />
-              <div />
-              <div>
-                <Link to="/snack">SNACK</Link>
-              </div>
-              <div />
-              <div />
-              <div>
-                <Link to="/special-combo">SPECIAL COMBO</Link>
-              </div>
-              <div />
             </div>
 
             <div className="map-container">
               <GoogleMapComponent />
-              <div>
-                9339 Baltimore National Pike, Ellicott City, MD 21042
-              </div>
+              <div>9339 Baltimore National Pike, Ellicott City, MD 21042</div>
               <div className="social-links">
                 <CTAButton
                   className="icon"
@@ -84,9 +103,6 @@ const Footer: React.FC = () => {
           </div>
         </div>
       </footer>
-      {/* <div className="second-box">
-        Copyright &copy; 2024 DAALL HOUSE LLC
-      </div> */}
     </>
   );
 };

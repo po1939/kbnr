@@ -9,7 +9,7 @@ const MyComponent: React.FC = () => {
         <h2 className="mb-4">About Us</h2>
       </div>
       <div className="container">
-        <div className="image-text-container my-4">
+        <div className="image-text-container my-4" id="our-story">
           <img src={about1} />
           <div className="text-container">
             <h3>Our Story</h3>
@@ -28,8 +28,7 @@ const MyComponent: React.FC = () => {
         </div>
       </div>
 
-      
-      <div className="container ">
+      <div className="container " id="our-promise">
         <div className="image-text-container my-4 reverse">
           <img src={about2} />
           <div className="text-container">
@@ -47,7 +46,6 @@ const MyComponent: React.FC = () => {
           </div>
         </div>
       </div>
-
     </div>
   );
 };

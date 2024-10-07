@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logo from './../../assets/icons/kimbapnara.svg';
+import logo from './../../assets/images/kimna-icon.png';
+import logoText from './../../assets/images/kimna-logo-text.png';
 import CTAButton from './CTAButton';
 
 const Header: React.FC = () => {
@@ -10,6 +11,7 @@ const Header: React.FC = () => {
         <div className='logo'>
             <a href='/'>
                 <img src={logo} />
+                <img src={logoText} />
             </a>
         </div>
         <ul>

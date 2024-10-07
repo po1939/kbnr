@@ -1,67 +1,81 @@
 //Footer
 
 footer {
-    background-color: black;
-    .footer-container {
-        padding: 45px 138px;   
+  background-color: black;
+  .container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  .footer-contents {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding-top: 15px;
+    @media (max-width: 768px) {
+      flex-direction: column;
     }
-    .footer-contents {
+
+    .business-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      .hour-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 300px;
+      }
+    }
+    .nav-container {
+      display: flex;
+      gap: 3rem;
+      .footer-nav-group {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+      a {
+        color: white;
+        text-decoration: none;
+        &:not(:has(h4)) {
+          display: block;
+        }
+        &:active,
+        &:hover {
+          font-weight: 500;
+          color: $primary-red;
+        }
+        @media (max-width: 768px) {
+          &:not(:has(h4)) {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .map-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      //padding-top: 15px;
+      width: 300px;
+
+      gap: 15px;
+      .social-links {
         display: flex;
         flex-direction: row;
+        width: 25%;
         justify-content: space-between;
-        padding-top: 15px;
-        .business-container {
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
-            .hour-container {
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                width: 300px;
-                //padding-bottom: 10px;
-            }
-        }
-        .nav-container {
-            display:grid;
-            //row-gap: 1px;
-            grid-column-gap: 30px;
-            //grid-auto-rows: auto;
-            grid-template-columns: 140px 90px 120px;
-            a{
-                color: white;
-                text-decoration: none;
-                &:active, &:hover{
-                    font-weight: 500;
-                    color: $primary-red;
-                }    
-            }
-            
-        }
-
-        .map-container{
-            display:flex;
-            flex-direction: column;
-            justify-content: space-between;
-            //padding-top: 15px;
-            width:300px;
-            
-            gap: 15px;
-            .social-links{
-                display:flex;
-                flex-direction: row;
-                width: 25%;
-                justify-content: space-between;
-            }
-        }
-           
+      }
     }
+  }
 }
-
 
 // .second-box {
 //     padding: 5px 5px;
-//     font-size:10px; 
+//     font-size:10px;
 //     font-family: 'Open Sans', sans-serif;
 //     background-color: white;
 //     color: black;

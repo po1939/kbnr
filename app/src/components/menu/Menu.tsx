@@ -551,7 +551,7 @@ const MyComponent: React.FC = ({}) => {
       <div className="menu-content">
         <Legends items={legends} />
         <section id="kimbap">
-          <h4>Kimbap</h4>
+          <h3>Kimbap</h3>
           <p>
             “Kimbap” (김밥)  is a popular Korean dish that consists of seaweed
             rice rolls filled with various ingredients. The name "kimbap"
@@ -562,7 +562,7 @@ const MyComponent: React.FC = ({}) => {
           <MenuItemCard items={kimbapItems} />
         </section>
         <section id="entree">
-          <h4>Entree</h4>
+          <h3>Entree</h3>
           <p>
             Our entree section consists of a variety of "Hansik" (한식) items
             which refers to traditional Korean cuisine. It encompasses a rich
@@ -574,7 +574,7 @@ const MyComponent: React.FC = ({}) => {
           <MenuItemCard items={entreeItems} />
         </section>
         <section id="noodle">
-          <h4>Noodles</h4>
+          <h3>Noodles</h3>
           <p>
             Indulge in the rich and savory world of Korean noodle dishes, where
             every bite is a balance of comfort and flavor. From variations of
@@ -588,7 +588,7 @@ const MyComponent: React.FC = ({}) => {
           <MenuItemCard items={noodleItems} />
         </section>
         <section id="boonsik">
-          <h4>Boonsik</h4>
+          <h3>Boonsik</h3>
           <p>
             "Boonsik" (분식) refers to a category of Korean street food that
             includes various snacks and light meals. Boonsik is a combination of
@@ -599,7 +599,7 @@ const MyComponent: React.FC = ({}) => {
           <MenuItemCard items={boonsikItems} />
         </section>
         <section id="special-combo">
-          <h4>Special Combo</h4>
+          <h3>Special Combo</h3>
           <MenuItemCard items={comboItems} columns={1} />
         </section>
       </div>
