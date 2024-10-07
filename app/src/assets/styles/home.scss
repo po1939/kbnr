@@ -43,16 +43,17 @@
     }
 
     h2 ~ p {
-        max-width: 1200px;
-        margin: auto;
+      max-width: 1200px;
+      margin: auto;
     }
   }
 
-  // .menu-list{
-  //   display: flex;
-  //   gap: .5rem;
-  //   justify-content: center;
-  // }
+  .menu-list {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 
   .review-hide {
     width: 100%;

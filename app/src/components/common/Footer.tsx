@@ -20,55 +20,54 @@ const Footer: React.FC = () => {
             <div className="business-container">
               <h4>Business Hours</h4>
               <div className="hour-container">
-                <footer>Wed - Mon: 10 AM - 6:30 PM</footer>
-                <footer>Tue: CLOSED</footer>
+                <div>Wed - Mon: 10 AM - 6:30 PM</div>
+                <div>Tue: CLOSED</div>
               </div>
-              <footer>Dine In Closes 30 Minutes Prior To Closing Time</footer>
-              <footer>(410) 456-9166</footer>
-              <footer> Copyright &copy; 2024 DAALL HOUSE LLC </footer>
+              <div>Dine In Closes 30 Minutes Prior To Closing Time</div>
+              <div>(410) 456-9166</div>
+              <div> Copyright &copy; 2024 DAALL HOUSE LLC </div>
             </div>
             <div className="nav-container">
               <h4>About Us</h4>
               <h4>Menu</h4>
               <h4>Contact</h4>
 
-              <footer>
+              <div>
                 <Link to="/our-story">OUR STORY</Link>
-              </footer>
-              <footer>
+              </div>
+              <div>
                 <Link to="/kimbap">KIMBAP</Link>
-              </footer>
+              </div>
               <div />
-              <footer>
+              <div>
                 <Link to="/our-promise">OUR PROMISE</Link>
-              </footer>
-              <footer>
+              </div>
+              <div>
                 <Link to="/entree">ENTREE</Link>
-              </footer>
+              </div>
               <div />
               <div />
-              <footer>
+              <div>
                 <Link to="/noodle">NOODLE</Link>
-              </footer>
+              </div>
               <div />
               <div />
-              <footer>
+              <div>
                 <Link to="/snack">SNACK</Link>
-              </footer>
+              </div>
               <div />
               <div />
-              <footer>
+              <div>
                 <Link to="/special-combo">SPECIAL COMBO</Link>
-              </footer>
+              </div>
               <div />
             </div>
 
             <div className="map-container">
               <GoogleMapComponent />
-              <footer>
-                {" "}
+              <div>
                 9339 Baltimore National Pike, Ellicott City, MD 21042
-              </footer>
+              </div>
               <div className="social-links">
                 <CTAButton
                   className="icon"

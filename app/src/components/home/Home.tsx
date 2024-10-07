@@ -40,7 +40,7 @@ const MyComponent: React.FC = () => {
           </p>
 
           <div className="menu-navigation">
-            <div className="menu-list d-flex justify-content-center gap-2">
+            <div className="menu-list">
               <MyImageButton src={kimbap} to="/menu#kimbap" label="Kimbap" />
               <MyImageButton src={entree} to="/menu#entree" label="Entree" />
               <MyImageButton src={noodle} to="/menu#noodle" label="Noodle" />

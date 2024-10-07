@@ -7,7 +7,7 @@
 
 $primary-red: #ef3e56;
 
-html{
+html {
   scroll-behavior: smooth;
 }
 main {
@@ -25,6 +25,9 @@ h1 {
   font-size: 38px; /* Set font size */
   letter-spacing: 4px;
   margin: 0;
+  text-wrap: wrap;
+  max-width: 80vw;
+  text-align: center;
 }
 
 h2 {
@@ -69,7 +72,6 @@ footer {
 .container {
   max-width: 1600px;
   margin: auto;
-
 }
 
 .white-bg {
@@ -105,18 +107,17 @@ footer {
   border: none;
 }
 
-
 //image button
 .img-btn {
   position: relative;
   padding: 0 !important;
   min-width: auto;
-  display: inline-block; 
-  border: none; 
+  display: inline-block;
+  border: none;
   border-radius: 0 !important;
   text-decoration: none; /* Ensures no underline on the link */
   overflow: hidden; /* Ensures that the image and label do not overflow the container */
-  img{
+  img {
     width: 236px;
   }
   .label {
@@ -130,7 +131,6 @@ footer {
     color: white;
     text-align: center;
     text-wrap: nowrap;
-    
   }
   .image-overlay {
     position: absolute;
@@ -138,9 +138,8 @@ footer {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5); 
-    pointer-events: none; 
-    
+    background-color: rgba(0, 0, 0, 0.5);
+    pointer-events: none;
   }
   .ripple {
     position: absolute;
@@ -152,10 +151,9 @@ footer {
     width: 100px; /* Size of the ripple */
     height: 100px; /* Size of the ripple */
   }
-  &:hover .image-overlay{
-    background-color: rgba(0, 0, 0, 0.4); 
+  &:hover .image-overlay {
+    background-color: rgba(0, 0, 0, 0.4);
     transition: transform 0.6s, opacity 0.6s;
-
   }
   &:hover .ripple {
     transform: scale(4); /* Make the ripple effect visible */
@@ -194,5 +192,67 @@ footer {
       align-items: center;
       margin-top: 0px;
     }
+  }
+}
+
+//media query
+/* 1. Mobile Portrait (0px - 480px) */
+@media (max-width: 480px) {
+  /* CSS for mobile portrait view */
+  body {
+    font-size: 14px;
+  }
+
+}
+
+/* 2. Mobile Landscape (481px - 767px) */
+@media (min-width: 481px) and (max-width: 767px) {
+  /* CSS for mobile landscape view */
+  body {
+    font-size: 16px;
+    padding: 20px;
+  }
+
+
+}
+
+/* 3. Tablet Portrait (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* CSS for tablet portrait view */
+  body {
+    font-size: 18px;
+  }
+
+
+  .footer-container {
+    display: flex;
+  }
+}
+
+/* 4. Small Laptop/Desktop (1025px - 1366px) */
+@media (min-width: 1025px) and (max-width: 1366px) {
+  /* CSS for small laptop or desktop view */
+  body {
+    font-size: 18px;
+    padding: 40px;
+  }
+
+}
+
+/* 5. Large Screens (1367px and above) */
+@media (min-width: 1367px) {
+  /* CSS for large desktop screens */
+  body {
+    font-size: 20px;
+  }
+
+ 
+}
+
+
+@media (min-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: row;
   }
 }

@@ -15,6 +15,7 @@ import { Contact } from './components/contact/Contact';
 
 // Main App component
 const App: React.FC = () => {
+  
   return (
     <Router>
       <div className="app">
