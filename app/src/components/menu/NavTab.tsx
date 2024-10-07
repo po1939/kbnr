@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link } from '@mui/material';
+import React from "react";
+import { Link } from "@mui/material";
 
 interface NavTabsProps {
   links: { label: string; href: string }[];
@@ -8,14 +8,15 @@ interface NavTabsProps {
 export default function NavTabs({ links }: NavTabsProps) {
   return (
     <div className="nav-tab sticky-top">
-      <div className="container nav-tab-container">
+      <ul className="container nav-tab-container">
         {links.map((link, index) => (
-          <Link key={index} href={link.href}>
-            {link.label}
-          </Link>
-          
+          <li>
+            <Link key={index} href={link.href}>
+              {link.label}
+            </Link>
+          </li>
         ))}
-        </div>
+      </ul>
     </div>
   );
 }

@@ -25,7 +25,7 @@ const MyComponent: React.FC = () => {
             expectations!
           </p>
           <div>
-            <CTAButton to="/about" label="Learn More" />
+            <CTAButton to="/about" label="Our story" />
           </div>
         </div>
       </div>

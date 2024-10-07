@@ -29,14 +29,16 @@ const MyImageButton: React.FC<ImageButtonProps> = ({ src, to, label }) => {
   };
 
   return (
-    <HashLink smooth className="img-btn" to={to} scroll={scrollWithOffset}>
-      <Button className="p-0">
-        <img src={src} />
-        <div className="image-overlay"></div>
-        <div className="ripple" ref={rippleRef} />
-        <span className="label">{label}</span>
-      </Button>
-    </HashLink>
+    <li>
+      <HashLink smooth className="img-btn" to={to} scroll={scrollWithOffset}>
+        <Button className="p-0">
+          <img src={src} alt={label}/>
+          <div className="image-overlay"></div>
+          <div className="ripple" ref={rippleRef} />
+          <span className="label">{label}</span>
+        </Button>
+      </HashLink>
+    </li>
   );
 };
 

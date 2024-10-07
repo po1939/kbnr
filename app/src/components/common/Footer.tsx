@@ -6,16 +6,74 @@ import CTAButton from "./CTAButton";
 import instagramicon from "./../../assets/icons/instagramicon.svg";
 import yelpicon from "./../../assets/icons/yelpicon.svg";
 import { HashLink } from "react-router-hash-link";
-import { scrollWithOffset, scrollWithOffsetAboutPage } from "../../utils/scrollWithOffset";
+import {
+  scrollWithOffset,
+  scrollWithOffsetAboutPage,
+} from "../../utils/scrollWithOffset";
 
 const Footer: React.FC = () => {
+  const navLinks = [
+    {
+      title: "About Us",
+      link: "/about",
+      subLinks: [
+        {
+          label: "OUR STORY",
+          path: "/about#our-story",
+          scrollWithOffset: scrollWithOffsetAboutPage,
+        },
+        {
+          label: "OUR PROMISE",
+          path: "/about#our-promise",
+          scrollWithOffset: scrollWithOffsetAboutPage,
+        },
+      ],
+    },
+    {
+      title: "Menu",
+      link: "/menu",
+      subLinks: [
+        {
+          label: "KIMBAP",
+          path: "/menu#kimbap",
+          scrollWithOffset: scrollWithOffset,
+        },
+        {
+          label: "ENTREE",
+          path: "/menu#entree",
+          scrollWithOffset: scrollWithOffset,
+        },
+        {
+          label: "NOODLE",
+          path: "/menu#noodle",
+          scrollWithOffset: scrollWithOffset,
+        },
+        {
+          label: "SNACK",
+          path: "/menu#snack",
+          scrollWithOffset: scrollWithOffset,
+        },
+        {
+          label: "SPECIAL COMBO",
+          path: "/menu#special-combo",
+          scrollWithOffset: scrollWithOffset,
+        },
+      ],
+    },
+    {
+      title: "Contact",
+      link: "/contact",
+      subLinks: [],
+    },
+  ];
+
   return (
     <>
       <footer>
         <div className="container">
           <div className="logo">
             <a href="/">
-              <img src={logo} />
+              <img src={logo} alt='kimbapnara-logo'/>
             </a>
           </div>
           <div className="footer-contents">
@@ -28,60 +86,35 @@ const Footer: React.FC = () => {
               <div>Dine In Closes 30 Minutes Prior To Closing Time</div>
               <div>(410) 456-9166</div>
               <div style={{ marginTop: "auto" }}>
-                Copyright &copy; 2024 DAALL HOUSE LLC{" "}
+                Copyright &copy; 2024 DAALL HOUSE LLC
               </div>
             </div>
             <div className="nav-container">
-              <div className="footer-nav-group">
-                <Link to="/about">
-                  <h4>About Us</h4>
-                </Link>
-                <HashLink
-                  smooth
-                  scroll={scrollWithOffsetAboutPage}
-                  to="/about#our-story"
-                >
-                  OUR STORY
-                </HashLink>
-                <HashLink
-                  smooth
-                  scroll={scrollWithOffsetAboutPage}
-                  to="/about#our-promise"
-                >
-                  OUR PROMISE
-                </HashLink>
-              </div>
-              <div className="footer-nav-group">
-                <Link to="/menu">
-                  <h4>Menu</h4>
-                </Link>
-                <HashLink smooth scroll={scrollWithOffset} to="/menu#kimbap">
-                  KIMBAP
-                </HashLink>
-                <HashLink smooth scroll={scrollWithOffset} to="/menu#entree">
-                  ENTREE
-                </HashLink>
-                <HashLink smooth scroll={scrollWithOffset} to="/menu#noodle">
-                  NOODLE
-                </HashLink>
-                <HashLink smooth scroll={scrollWithOffset} to="/menu#snack">
-                  SNACK
-                </HashLink>
-                <HashLink
-                  smooth
-                  scroll={scrollWithOffset}
-                  to="/menu#special-combo"
-                >
-                  SPECIAL
-                  <br />
-                  COMBO
-                </HashLink>
-              </div>
-              <div className="footer-nav-group">
-                <Link to="/contact">
-                  <h4>Contact</h4>
-                </Link>
-              </div>
+              {navLinks.map((section, index) => (
+                <ul className="footer-nav-group" key={index}>
+                  <li>
+                    <Link to={section.link}>
+                      <h4>{section.title}</h4>
+                    </Link>
+                  </li>
+                  {section.subLinks.map((subLink, subIndex) => (
+                    <li key={subIndex}>
+                      <HashLink
+                        smooth
+                        scroll={subLink.scrollWithOffset}
+                        to={subLink.path}
+                      >
+                        {subLink.label.split(" ").map((word, i) => (
+                          <React.Fragment key={i}>
+                            {word}
+                            {i < subLink.label.split(" ").length - 1 && <br />}
+                          </React.Fragment>
+                        ))}
+                      </HashLink>
+                    </li>
+                  ))}
+                </ul>
+              ))}
             </div>
 
             <div className="map-container">
@@ -90,11 +123,13 @@ const Footer: React.FC = () => {
               <div className="social-links">
                 <CTAButton
                   className="icon"
+                  alt="instagram"
                   to="https://www.instagram.com/kimbapnaraec/"
                   imgSrc={instagramicon}
                 />
                 <CTAButton
                   className="icon"
+                  alt="yelp"
                   to="https://www.yelp.com/biz/kim-bob-na-ra-ellicott-city-2"
                   imgSrc={yelpicon}
                 />

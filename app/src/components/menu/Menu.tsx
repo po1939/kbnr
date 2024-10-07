@@ -180,7 +180,6 @@ const MyComponent: React.FC = ({}) => {
       icon: SpicyIcon,
       price: "$25.99",
     },
-
   ];
   const entreeItems = [
     {
@@ -539,6 +538,7 @@ const MyComponent: React.FC = ({}) => {
 
   return (
     <div className="menu">
+      <h1 style={{ opacity: 0, position: "absolute" }}>Menu</h1>
       <NavTabs
         links={[
           { href: "/menu#kimbap", label: "Kimbap" },

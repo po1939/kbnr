@@ -9,7 +9,7 @@ export const Contact: React.FC = () => {
   return (
     <div className="contact-page">
       <div className="container">
-        <h2>CONTACT US</h2>
+        <h1>CONTACT US</h1>
         <p>
           We'd love to hear from you! Whether you have a question, want to make
           a reservation, or just want to say hi, feel free to reach out to us.
@@ -24,15 +24,15 @@ export const Contact: React.FC = () => {
 
         <div className="contact-info">
           <div className="contact-info-item">
-            <img src={location} />
+            <img src={location} alt="pin-icon"/>
             9339 Baltimore National Pike, Ellicott City, MD 21042
           </div>
           <div className="contact-info-item">
-            <img src={phone} />
+            <img src={phone} alt="phone-icon"/>
             (410)-456-9166
           </div>
           <div className="contact-info-item">
-            <img src={mail} />
+            <img src={mail} alt="email-icon"/>
             kimbapnaraec@gmail.com
           </div>
         </div>

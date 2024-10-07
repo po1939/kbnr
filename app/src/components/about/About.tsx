@@ -6,11 +6,11 @@ const MyComponent: React.FC = () => {
   return (
     <div className="about-page">
       <div className="container">
-        <h2 className="mb-4">About Us</h2>
+        <h1 className="mb-4">About Us</h1>
       </div>
       <div className="container">
         <div className="image-text-container my-4" id="our-story">
-          <img src={about1} />
+          <img alt="about-our-story" src={about1} />
           <div className="text-container">
             <h3>Our Story</h3>
             <p>
@@ -30,7 +30,7 @@ const MyComponent: React.FC = () => {
 
       <div className="container " id="our-promise">
         <div className="image-text-container my-4 reverse">
-          <img src={about2} />
+          <img alt="about-our-promise" src={about2} />
           <div className="text-container">
             <h3>Our Promise</h3>
             <p>
