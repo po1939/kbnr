@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.fa11e0ff.css",
-    "main.js": "/static/js/main.b21857bd.js",
+    "main.css": "/static/css/main.494fc9de.css",
+    "main.js": "/static/js/main.d8a0a6ef.js",
     "static/js/787.0f8d78ff.chunk.js": "/static/js/787.0f8d78ff.chunk.js",
     "static/media/kimbapnara-about-01.png": "/static/media/kimbapnara-about-01.65bfecaaa284ce203e70.png",
     "static/media/kimbapnara-about-02.png": "/static/media/kimbapnara-about-02.c1da4f0af5d4a0b68d62.png",
@@ -60,7 +60,6 @@
     "static/media/jeyook_dupbap.png": "/static/media/jeyook_dupbap.1c25bc228bfb359e137b.png",
     "static/media/squid_dupbap.png": "/static/media/squid_dupbap.cc4f55d01cd3237d297e.png",
     "static/media/octopus_dupbap.png": "/static/media/octopus_dupbap.19d9b43d6f749d442583.png",
-    "static/media/kimbapnara.svg": "/static/media/kimbapnara.7fc0dad63798830949c8f0787c00fd13.svg",
     "static/media/chicken_fried_rice.png": "/static/media/chicken_fried_rice.6dd47ff402a4d06f8524.png",
     "static/media/bulgogi_dupbap.png": "/static/media/bulgogi_dupbap.8c19f0795952c6216b4c.png",
     "static/media/specialcombo.png": "/static/media/specialcombo.0f1687cabb732e2b4e38.png",
@@ -68,7 +67,6 @@
     "static/media/boonsik.png": "/static/media/boonsik.9bda6581e8cb56a4415b.png",
     "static/media/kimbap.png": "/static/media/kimbap.47c30b8df346586a8e2c.png",
     "static/media/noodle.png": "/static/media/noodle.cb1df515ae6bba6c979b.png",
-    "static/media/kimnafooter.svg": "/static/media/kimnafooter.36209cade7dd8201a41b32d238504f59.svg",
     "static/media/phone.svg": "/static/media/phone.cbedf89dc422854d2f670d8b04c8d54f.svg",
     "static/media/yelpicon.svg": "/static/media/yelpicon.da5791fe5d1b7ba9d11674f7f037ad20.svg",
     "static/media/vegan-icon.svg": "/static/media/vegan-icon.5e1484e69f248d4f3b2e486b4c32ffba.svg",
@@ -77,12 +75,12 @@
     "index.html": "/index.html",
     "static/media/spicy-icon.svg": "/static/media/spicy-icon.87b731994f89b37818336113a77eddd4.svg",
     "static/media/mail.svg": "/static/media/mail.576a4d71fc28f8b6c4e895c1e44d80b4.svg",
-    "main.fa11e0ff.css.map": "/static/css/main.fa11e0ff.css.map",
-    "main.b21857bd.js.map": "/static/js/main.b21857bd.js.map",
+    "main.494fc9de.css.map": "/static/css/main.494fc9de.css.map",
+    "main.d8a0a6ef.js.map": "/static/js/main.d8a0a6ef.js.map",
     "787.0f8d78ff.chunk.js.map": "/static/js/787.0f8d78ff.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.fa11e0ff.css",
-    "static/js/main.b21857bd.js"
+    "static/css/main.494fc9de.css",
+    "static/js/main.d8a0a6ef.js"
   ]
 }

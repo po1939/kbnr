@@ -158,12 +158,12 @@ footer {
 
 .secondheader {
   position: relative; /* Ensure the image container serves as the positioning context */
-  .image {
+  video {
     width: 100%; /* Make sure the image takes up the entire width of its container */
-    height: 450px; /* Maintain the aspect ratio */
+    height: 500px; /* Maintain the aspect ratio */
     vertical-align: middle;
     object-fit: cover;
-    filter: brightness(200%);
+    // filter: brightness(200%);
   }
   .text-overlay {
     position: absolute; /* Position the text overlay relative to the image container */

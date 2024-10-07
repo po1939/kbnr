@@ -1,10 +1,13 @@
 import React from 'react';
-import background1 from './../../assets/images/homepage1.png';
+import heroBg from './../../assets/video/kimbapnara-hero-bg.mp4';
 
 const SecondHeader: React.FC = () => {
   return (
     <div className="secondheader">
-        <img src= {background1} alt="Image" className="image" />
+        <video autoPlay muted loop id="hero-video-bg">
+        <source src={heroBg} type="video/mp4" />
+
+        </video>
         <div className="text-overlay">
           <div className="text">
             <h3>Kimbap & Beyond:</h3>

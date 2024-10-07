@@ -33,7 +33,7 @@ export const Contact: React.FC = () => {
           </div>
           <div className="contact-info-item">
             <img src={mail} />
-            kimbapnara@gmail.com
+            kimbapnaraec@gmail.com
           </div>
         </div>
 
