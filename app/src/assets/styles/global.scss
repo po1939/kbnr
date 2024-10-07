@@ -1,3 +1,4 @@
+@import "./variables.scss";
 @import "./about.scss";
 @import "./contact.scss";
 @import "./home.scss";
@@ -5,27 +6,35 @@
 @import "./header.scss";
 @import "./footer.scss";
 
-$primary-red: #ef3e56;
+html {
+  scroll-behavior: smooth;
+  overscroll-behavior: none; /* Prevent scroll chaining and bounce effects */
+}
 main {
-  margin-top: 107px;
+  margin-top: $header-height;
 }
 
-.about,
-.contact {
-  margin-top: 10rem;
+.about-page,
+.contact-page {
+  margin-top: calc($header-height + 1.5rem);
 }
-h1 {
-  font-family: "Sen", sans-serif;
-  text-transform: uppercase;
-  color: white; /* Set text color */
-  font-size: 38px; /* Set font size */
-  letter-spacing: 4px;
-  margin: 0;
+.secondheader {
+  h1 {
+    font-family: "Sen", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin: 0;
+    text-wrap: wrap;
+    max-width: 80vw;
+    text-align: center;
+  }
 }
-
+.white-text {
+  color: white !important;
+}
+h1,
 h2 {
   font-family: "Sen", sans-serif;
-  font-size: 38px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -35,37 +44,38 @@ h2 {
 h3 {
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
-  color: white; /* Set text color */
-  font-size: 18px; /* Set font size */
+  color: white;
   font-weight: lighter;
 }
 
 h4 {
   font-family: "Montserrat", sans-serif;
-  color: white; /* Set text color */
-  font-size: 22px; /* Set font size */
+  color: white;
   font-weight: 400;
   margin: 0;
 }
+
 p {
   font-family: "Open Sans", sans-serif;
-  font-size: 16px;
   color: black;
-  line-height: 2;
+  line-height: 1.5;
   font-weight: 400;
 }
+
 footer {
   font-family: "Open Sans", sans-serif;
-  font-size: 16px;
   font-weight: 300;
   color: white;
   margin: 0;
 }
 
-.container {
-  max-width: 1600px;
-  margin: auto;
+li:has(a) {
+  list-style: none;
 }
+// .container {
+//   max-width: 1600px;
+//   margin: auto;
+// }
 
 .white-bg {
   background-color: white !important;
@@ -75,7 +85,7 @@ footer {
 .cta-btn {
   font-family: "Open Sans", sans-serif !important;
   color: white !important;
-  background-color: #ef3e56 !important;
+  background-color: $primary-red !important;
   font-weight: 600 !important;
   text-wrap: nowrap;
   border-radius: 30px !important;
@@ -103,13 +113,16 @@ footer {
 //image button
 .img-btn {
   position: relative;
-  padding: 0;
+  padding: 0 !important;
   min-width: auto;
-  display: inline-block; /* Ensures the image button takes up only the necessary space */
-  border: none; /* Removes any default button styling */
+  display: inline-block;
+  border: none;
+  border-radius: 0 !important;
   text-decoration: none; /* Ensures no underline on the link */
   overflow: hidden; /* Ensures that the image and label do not overflow the container */
-
+  img {
+    width: 236px;
+  }
   .label {
     position: absolute;
     font-family: "Open Sans", sans-serif;
@@ -117,19 +130,33 @@ footer {
     font-size: larger;
     text-transform: none;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%);
     color: white;
     text-align: center;
+    text-wrap: nowrap;
+  }
+  .image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    pointer-events: none;
   }
   .ripple {
     position: absolute;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.1);
     pointer-events: none; /* Allows clicking through the ripple */
     transform: scale(0);
     transition: transform 0.6s, opacity 0.6s;
     width: 100px; /* Size of the ripple */
     height: 100px; /* Size of the ripple */
+  }
+  &:hover .image-overlay {
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: transform 0.6s, opacity 0.6s;
   }
   &:hover .ripple {
     transform: scale(4); /* Make the ripple effect visible */
@@ -139,12 +166,15 @@ footer {
 
 .secondheader {
   position: relative; /* Ensure the image container serves as the positioning context */
-  .image {
+  video {
     width: 100%; /* Make sure the image takes up the entire width of its container */
-    height: 400px; /* Maintain the aspect ratio */
+    height: 500px; /* Maintain the aspect ratio */
     vertical-align: middle;
     object-fit: cover;
-    filter: brightness(200%);
+    // filter: brightness(200%);
+    @media (max-width: 768px) {
+      height: 350px;
+    }
   }
   .text-overlay {
     position: absolute; /* Position the text overlay relative to the image container */
@@ -170,3 +200,145 @@ footer {
     }
   }
 }
+
+
+//media query
+/* 1. Mobile Portrait (0px - 480px) */
+@media (max-width: 480px) {
+  /* CSS for mobile portrait view */
+  body,
+  label {
+    font-size: 14px !important;
+  }
+  .nav-container {
+    flex-wrap: wrap;
+  }
+}
+
+/* 2. Mobile Landscape (481px - 767px) */
+@media (min-width: 481px) and (max-width: 767px) {
+  /* CSS for mobile landscape view */
+  body,
+  label {
+    font-size: 16px !important;
+  }
+}
+
+/* 3. Tablet Portrait (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* CSS for tablet portrait view */
+  body,
+  label {
+    font-size: 18px !important;
+  }
+
+  .footer-container {
+    display: flex;
+  }
+}
+
+/* 4. Small Laptop/Desktop (1025px - 1366px) */
+@media (min-width: 1025px) and (max-width: 1366px) {
+  /* CSS for small laptop or desktop view */
+  body,
+  label {
+    font-size: 18px !important;
+  }
+}
+
+/* 5. Large Screens (1367px and above) */
+@media (min-width: 1367px) {
+  /* CSS for large desktop screens */
+  body,
+  label {
+    font-size: 20px !important;
+  }
+}
+
+// @media (min-width: 1199.9px) {
+//   .hide-mobile{
+//     display: block;
+//   }
+  
+//   .hide-desktop{
+//     display: none;
+//   }
+// }
+
+// @media (max-width: 1199.8px) {
+//   .hide-mobile{
+//     display: none;
+//   }
+  
+//   .hide-desktop{
+//     display: block;
+//   }
+// }
+@media (max-width: 1023px) {
+  .logo:not(.footer.logo) {
+    img:last-of-type {
+      display: none;
+    }
+  }
+}
+@media (max-width: 768px) {
+  a,
+  p,
+  h2,
+  h3,
+  h4:not(footer h4) {
+    text-align: center;
+  }
+  .legends {
+    justify-content: center !important;
+    align-items: center !important;
+    p {
+      text-wrap: nowrap;
+    }
+  }
+  .menu-content {
+    padding: 1rem !important;
+  }
+  .about-page .image-text-container .text-container {
+    padding-right: 0;
+    max-width: 100%;
+  }
+  img:not(header img, footer img) {
+    width: 100%;
+    max-height: 350px;
+    margin: auto;
+  }
+}
+
+//scrollbar
+/* Styling the scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+/* Track (the background of the scrollbar) */
+// ::-webkit-scrollbar-track {
+//   background: transparent; /* Mac scrollbar track is often invisible */
+// }
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Light gray background for the track */
+  border-radius: 10px;
+}
+/* Handle (the scrolling thumb) */
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.151); /* Dark, semi-transparent handle */
+  border-radius: 20px; /* Rounded corners */
+  transition: background-color 0.3s ease;
+}
+
+/* Handle on hover (the scrolling thumb when hovered) */
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.25); /* Slightly darker on hover */
+}
+
+/* Optional: Set scrollbar for horizontal scrolling */
+::-webkit-scrollbar-horizontal {
+  height: 6px; /* Horizontal scrollbar height */
+}
+

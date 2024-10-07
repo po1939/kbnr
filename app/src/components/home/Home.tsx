@@ -9,6 +9,7 @@ import boonsik from "./../../assets/images/boonsik.png";
 import GoogleReviewsWidget from "./GoogleCarousel";
 import MyImageButton from "../common/ImageButton";
 import GoogleMapsEmbed from "../common/GoogleMap";
+import MoveToTop from "../common/MoveToTop";
 
 const MyComponent: React.FC = () => {
   return (
@@ -18,13 +19,13 @@ const MyComponent: React.FC = () => {
         <div className="container">
           <h2>About Us</h2>
           <p>
-            We take pride in delivering an authentic Korean culinary experience.<br/>
+            We take pride in delivering an authentic Korean culinary experience.
             Our promises to you are as carefully crafted as our delicious Korean
             food, ensuring a dining adventure that goes beyond your
             expectations!
           </p>
           <div>
-            <CTAButton to="/about" label="Learn More" />
+            <CTAButton to="/about" label="Our story" />
           </div>
         </div>
       </div>
@@ -33,23 +34,23 @@ const MyComponent: React.FC = () => {
           <h2>Menu</h2>
           <p>
             Kimbap (김밥) is a popular Korean dish, featuring seaweed rice rolls
-            filled with diverse ingredients. <br/> Translating to "seaweed rice" in
-            Korean, kimbap is often likened to Korean sushi, boasting unique
-            flavors and ingredients.
+            filled with diverse ingredients. Translating to "seaweed
+            rice" in Korean, kimbap is often likened to Korean sushi, boasting
+            unique flavors and ingredients.
           </p>
 
           <div className="menu-navigation">
-            <div className="menu-list">
-              <MyImageButton src={kimbap} to="/menu" label="Kimbap" />
+            <ul className="menu-list">
+              <MyImageButton src={kimbap} to="/menu#kimbap" label="Kimbap" />
+              <MyImageButton src={entree} to="/menu#entree" label="Entree" />
+              <MyImageButton src={noodle} to="/menu#noodle" label="Noodle" />
+              <MyImageButton src={boonsik} to="/menu#boonsik" label="Boonsik" />
               <MyImageButton
                 src={specialcombo}
-                to="/menu"
+                to="/menu#special-combo"
                 label="Special Combo"
               />
-              <MyImageButton src={entree} to="/menu" label="Entree" />
-              <MyImageButton src={noodle} to="/menu" label="Noodle" />
-              <MyImageButton src={boonsik} to="/menu" label="Boonsik" />
-            </div>
+            </ul>
           </div>
         </div>
       </div>
@@ -61,14 +62,11 @@ const MyComponent: React.FC = () => {
           <div className="text-container">
             <h2>Contact</h2>
             <p>9339 Baltimore National Pike, Ellicott City, MD 21042</p>
-            <div className="hour-container">
-              <div className="time">
-                <p>Wed - Mon: 10 AM - 6:30 PM</p>
-                <p>Tue: CLOSED</p>
-              </div>
-            </div>
+            <p>Wed - Mon: 10 AM - 6:30 PM</p>
+            <p>Tue: CLOSED</p>
+
             <div className="call-button">
-              <CTAButton to="tel:+4104569166" label="(410)456-9166" />
+              <CTAButton to="tel:+14104569166" label="(410)456-9166" />
             </div>
           </div>
         </div>
@@ -80,6 +78,7 @@ const MyComponent: React.FC = () => {
         </div>
         <div className="review-hide"></div>
       </div>
+      <MoveToTop />
     </div>
   );
 };

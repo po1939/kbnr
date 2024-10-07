@@ -1,16 +1,27 @@
-import React from 'react';
-import background1 from './../../assets/images/homepage1.png';
+import React from "react";
+import heroBg from "./../../assets/video/kimbapnara-hero-bg.mp4";
 
 const SecondHeader: React.FC = () => {
   return (
     <div className="secondheader">
-        <img src= {background1} alt="Image" className="image" />
-        <div className="text-overlay">
-          <div className="text">
-            <h3>Kimbap & Beyond:</h3>
-            <h1> A Tapestry of Korean Flavors Await!</h1>
-          </div> 
-        </div> 
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="auto"
+        id="hero-video-bg"
+        title="Background video showcasing kimbap prepairing"
+      >
+        <source src={heroBg} type="video/mp4" />
+        <track kind="captions" label="English" default />
+        </video>
+      <div className="text-overlay">
+        <div className="text">
+          <h3>Kimbap & Beyond:</h3>
+          <h1 className="white-text"> A Tapestry of Korean Flavors Await!</h1>
+        </div>
+      </div>
     </div>
   );
 };

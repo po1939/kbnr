@@ -1,5 +1,7 @@
-import React, {useRef} from 'react';
-import Button from '@mui/material/Button';
+import React, { useRef } from "react";
+import Button from "@mui/material/Button";
+import { HashLink } from "react-router-hash-link";
+import { scrollWithOffset } from "../../utils/scrollWithOffset";
 
 interface ImageButtonProps {
   src: string;
@@ -21,17 +23,22 @@ const MyImageButton: React.FC<ImageButtonProps> = ({ src, to, label }) => {
       ripple.style.height = `${size}px`;
       ripple.style.left = `${x}px`;
       ripple.style.top = `${y}px`;
-      ripple.classList.add('show');
-      setTimeout(() => ripple.classList.remove('show'), 600);
+      ripple.classList.add("show");
+      setTimeout(() => ripple.classList.remove("show"), 600);
     }
   };
 
   return (
-    <Button className="img-btn" href={to}>
-      <img src = {src} />
-      <div className="ripple" ref={rippleRef} />
-      <span className="label">{label}</span>
-    </Button>
+    <li>
+      <HashLink smooth className="img-btn" to={to} scroll={scrollWithOffset}>
+        <Button className="p-0">
+          <img src={src} alt={label}/>
+          <div className="image-overlay"></div>
+          <div className="ripple" ref={rippleRef} />
+          <span className="label">{label}</span>
+        </Button>
+      </HashLink>
+    </li>
   );
 };
 

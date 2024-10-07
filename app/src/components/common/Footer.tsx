@@ -1,93 +1,143 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "./../../assets/icons/kimnafooter.svg";
+import logo from "./../../assets/images/kimnafooter.png";
 import GoogleMapComponent from "./GoogleMap";
 import CTAButton from "./CTAButton";
 import instagramicon from "./../../assets/icons/instagramicon.svg";
 import yelpicon from "./../../assets/icons/yelpicon.svg";
+import { HashLink } from "react-router-hash-link";
+import {
+  scrollWithOffset,
+  scrollWithOffsetAboutPage,
+} from "../../utils/scrollWithOffset";
 
 const Footer: React.FC = () => {
+  const navLinks = [
+    {
+      title: "About Us",
+      link: "/about",
+      subLinks: [
+        {
+          label: "OUR STORY",
+          path: "/about#our-story",
+          scrollWithOffset: scrollWithOffsetAboutPage,
+        },
+        {
+          label: "OUR PROMISE",
+          path: "/about#our-promise",
+          scrollWithOffset: scrollWithOffsetAboutPage,
+        },
+      ],
+    },
+    {
+      title: "Menu",
+      link: "/menu",
+      subLinks: [
+        {
+          label: "KIMBAP",
+          path: "/menu#kimbap",
+          scrollWithOffset: scrollWithOffset,
+        },
+        {
+          label: "ENTREE",
+          path: "/menu#entree",
+          scrollWithOffset: scrollWithOffset,
+        },
+        {
+          label: "NOODLE",
+          path: "/menu#noodle",
+          scrollWithOffset: scrollWithOffset,
+        },
+        {
+          label: "SNACK",
+          path: "/menu#snack",
+          scrollWithOffset: scrollWithOffset,
+        },
+        {
+          label: "SPECIAL COMBO",
+          path: "/menu#special-combo",
+          scrollWithOffset: scrollWithOffset,
+        },
+      ],
+    },
+    {
+      title: "Contact",
+      link: "/contact",
+      subLinks: [],
+    },
+  ];
+
   return (
     <>
       <footer>
-        <div className="footer-container">
-          <div className="logo">
+        <div className="container">
+          <div className="logo footer">
             <a href="/">
-              <img src={logo} />
+              <img src={logo} alt='kimbapnara-logo'/>
             </a>
           </div>
           <div className="footer-contents">
             <div className="business-container">
               <h4>Business Hours</h4>
               <div className="hour-container">
-                <footer>Wed - Mon: 10 AM - 6:30 PM</footer>
-                <footer>Tue: CLOSED</footer>
+                <div>Wed - Mon: 10 AM - 6:30 PM</div>
+                <div>Tue: CLOSED</div>
               </div>
-              <footer>Dine In Closes 30 Minutes Prior To Closing Time</footer>
-              <footer>(410) 456-9166</footer>
-              <footer> Copyright &copy; 2024 DAALL HOUSE LLC </footer>
+              <div>Dine In Closes 30 Minutes Prior To Closing Time</div>
+              <div>(410) 456-9166</div>
             </div>
             <div className="nav-container">
-              <h4>About Us</h4>
-              <h4>Menu</h4>
-              <h4>Contact</h4>
-
-              <footer>
-                <Link to="/our-story">OUR STORY</Link>
-              </footer>
-              <footer>
-                <Link to="/kimbap">KIMBAP</Link>
-              </footer>
-              <div />
-              <footer>
-                <Link to="/our-promise">OUR PROMISE</Link>
-              </footer>
-              <footer>
-                <Link to="/entree">ENTREE</Link>
-              </footer>
-              <div />
-              <div />
-              <footer>
-                <Link to="/noodle">NOODLE</Link>
-              </footer>
-              <div />
-              <div />
-              <footer>
-                <Link to="/snack">SNACK</Link>
-              </footer>
-              <div />
-              <div />
-              <footer>
-                <Link to="/special-combo">SPECIAL COMBO</Link>
-              </footer>
-              <div />
+              {navLinks.map((section, index) => (
+                <ul className="footer-nav-group" key={index}>
+                  <li>
+                    <Link to={section.link}>
+                      <h4>{section.title}</h4>
+                    </Link>
+                  </li>
+                  {section.subLinks.map((subLink, subIndex) => (
+                    <li key={subIndex}>
+                      <HashLink
+                        smooth
+                        scroll={subLink.scrollWithOffset}
+                        to={subLink.path}
+                      >
+                        {subLink.label.split(" ").map((word, i) => (
+                          <React.Fragment key={i}>
+                            {word}
+                            {i < subLink.label.split(" ").length - 1 && <br />}
+                          </React.Fragment>
+                        ))}
+                      </HashLink>
+                    </li>
+                  ))}
+                </ul>
+              ))}
             </div>
 
             <div className="map-container">
               <GoogleMapComponent />
-              <footer>
-                {" "}
-                9339 Baltimore National Pike, Ellicott City, MD 21042
-              </footer>
+              <div>9339 Baltimore National Pike, Ellicott City, MD 21042</div>
               <div className="social-links">
                 <CTAButton
                   className="icon"
+                  alt="instagram"
                   to="https://www.instagram.com/kimbapnaraec/"
                   imgSrc={instagramicon}
                 />
                 <CTAButton
                   className="icon"
+                  alt="yelp"
                   to="https://www.yelp.com/biz/kim-bob-na-ra-ellicott-city-2"
                   imgSrc={yelpicon}
                 />
               </div>
             </div>
+            <div className="hide-desktop" style={{ marginTop: "auto" }}>
+                Copyright &copy; 2024 DAALL HOUSE LLC
+              </div>
           </div>
         </div>
       </footer>
-      {/* <div className="second-box">
-        Copyright &copy; 2024 DAALL HOUSE LLC
-      </div> */}
     </>
   );
 };

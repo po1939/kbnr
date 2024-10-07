@@ -4,80 +4,31 @@ import about1 from "./../../assets/images/kimbapnara-about-01.png";
 import about2 from "./../../assets/images/kimbapnara-about-02.png";
 const MyComponent: React.FC = () => {
   return (
-    <div className="about">
+    <div className="about-page">
       <div className="container">
-        <h2 className="mb-4">About Us</h2>
+        <h1 className="mb-4">About Us</h1>
       </div>
       <div className="container">
-        <div className="image-text-container my-4">
-          <img src={about1} />
+        <div className="image-text-container my-4" id="our-story">
+          <img alt="about-our-story" src={about1} />
           <div className="text-container">
-            <h3>Our Story option 1</h3>
+            <h3>Our Story</h3>
             <p>
-              Kim Bap Na Ra is a cherished mom and pop Korean eatery born from
-              our family’s love for sharing the authentic flavors of home.
-              Located in the heart of Maryland’s “Korean Way” in Ellicott City,
-              our story is one of family recipes and a deep love for the
-              comforting simplicity of “Boon-sik” , Korean street food. Along
-              with a wide selection of “Kimbap” and other Korean dishes, our
-              cozy restaurant invites you to experience the heart and soul of
-              Korean home cooking. Thank you for being a part of our story. We
-              look forward to serving you soon.
+            Kim Bap Na Ra is a family-owned Korean eatery in Ellicott City, Maryland, inspired by our love for sharing authentic flavors. Located on "Korean Way," we serve a variety of dishes, including "Kimbap" and classic Korean street food ("Boon-sik"). Our cozy restaurant is all about the comfort and warmth of home cooking. Thank you for being part of our journey—we look forward to serving you soon!
             </p>
           </div>
         </div>
       </div>
 
-      
-      <div className="container ">
+      <div className="container " id="our-promise">
         <div className="image-text-container my-4 reverse">
-          <img src={about2} />
+          <img alt="about-our-promise" src={about2} />
           <div className="text-container">
-            <h3>Our Promise option 1</h3>
+            <h3>Our Promise</h3>
             <p>
-              Here at Kim Bap Nara, our main priority is your satisfaction. We
-              believe in a few key promises to ensure that every customer leaves
-              our restaurant feeling fulfilled. First, we always strive to
-              provide the quickest service while maintaining warm hospitality.
-              Additionally, we are committed to preserving authentic flavor by
-              using only quality ingredients. Finally, despite the limited
-              dining and kitchen space, we always do our best to serve everyone
-              who comes through our doors.
+            At Kim Bap Nara, your satisfaction is our top priority. We promise quick service with warm hospitality, authentic flavors made from quality ingredients, and our best effort to serve everyone despite our limited space.
             </p>
           </div>
-        </div>
-      </div>
-      <div className="image-text-container">
-        <img src={about1} />
-        <div className="text-container">
-          <h3>Our Story option 2</h3>
-          <p>
-            Kim Bap Na Ra is a cherished mom and pop Korean eatery born from our
-            family’s love for sharing the authentic flavors of home. Located in
-            the heart of Maryland’s “Korean Way” in Ellicott City, our story is
-            one of family recipes and a deep love for the comforting simplicity
-            of “Boon-sik” , Korean street food. Along with a wide selection of
-            “Kimbap” and other Korean dishes, our cozy restaurant invites you to
-            experience the heart and soul of Korean home cooking. Thank you for
-            being a part of our story. We look forward to serving you soon.
-          </p>
-        </div>
-      </div>
-
-      <div className="image-text-container reverse">
-        <img src={about1} />
-        <div className="text-container">
-          <h3>Our Promise option 2</h3>
-          <p>
-            Here at Kim Bap Nara, our main priority is your satisfaction. We
-            believe in a few key promises to ensure that every customer leaves
-            our restaurant feeling fulfilled. First, we always strive to provide
-            the quickest service while maintaining warm hospitality.
-            Additionally, we are committed to preserving authentic flavor by
-            using only quality ingredients. Finally, despite the limited dining
-            and kitchen space, we always do our best to serve everyone who comes
-            through our doors.
-          </p>
         </div>
       </div>
     </div>
