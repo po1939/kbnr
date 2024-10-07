@@ -576,14 +576,7 @@ const MyComponent: React.FC = ({}) => {
         <section id="noodle">
           <h3>Noodles</h3>
           <p>
-            Indulge in the rich and savory world of Korean noodle dishes, where
-            every bite is a balance of comfort and flavor. From variations of
-            the widely loved Korean style ramen to the refreshing and tangy bite
-            of our chilled noodles like Mul Naengmyeon and Bibim Naengmyeon,
-            there's something for every craving. Whether you're in the mood for
-            a hearty, steaming bowl or a cool, invigorating meal, our noodle
-            selection, made with fresh ingredients and traditional recipes,
-            brings the best of Korea’s noodle dishes to your table.
+          Discover the rich, savory flavors of Korean noodle dishes at our restaurant. From classic ramen to refreshing chilled noodles like Mul Naengmyeon and Bibim Naengmyeon, we have something for every craving. Whether you want a hearty, steaming bowl or a cool, light meal, our fresh ingredients and traditional recipes bring Korea's best noodles to your table.
           </p>
           <MenuItemCard items={noodleItems} />
         </section>
