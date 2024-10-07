@@ -12,7 +12,7 @@ const MyComponent: React.FC = () => {
         <div className="image-text-container my-4">
           <img src={about1} />
           <div className="text-container">
-            <h3>Our Story option 1</h3>
+            <h3>Our Story</h3>
             <p>
               Kim Bap Na Ra is a cherished mom and pop Korean eatery born from
               our family’s love for sharing the authentic flavors of home.
@@ -33,7 +33,7 @@ const MyComponent: React.FC = () => {
         <div className="image-text-container my-4 reverse">
           <img src={about2} />
           <div className="text-container">
-            <h3>Our Promise option 1</h3>
+            <h3>Our Promise</h3>
             <p>
               Here at Kim Bap Nara, our main priority is your satisfaction. We
               believe in a few key promises to ensure that every customer leaves
@@ -47,39 +47,7 @@ const MyComponent: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className="image-text-container">
-        <img src={about1} />
-        <div className="text-container">
-          <h3>Our Story option 2</h3>
-          <p>
-            Kim Bap Na Ra is a cherished mom and pop Korean eatery born from our
-            family’s love for sharing the authentic flavors of home. Located in
-            the heart of Maryland’s “Korean Way” in Ellicott City, our story is
-            one of family recipes and a deep love for the comforting simplicity
-            of “Boon-sik” , Korean street food. Along with a wide selection of
-            “Kimbap” and other Korean dishes, our cozy restaurant invites you to
-            experience the heart and soul of Korean home cooking. Thank you for
-            being a part of our story. We look forward to serving you soon.
-          </p>
-        </div>
-      </div>
 
-      <div className="image-text-container reverse">
-        <img src={about1} />
-        <div className="text-container">
-          <h3>Our Promise option 2</h3>
-          <p>
-            Here at Kim Bap Nara, our main priority is your satisfaction. We
-            believe in a few key promises to ensure that every customer leaves
-            our restaurant feeling fulfilled. First, we always strive to provide
-            the quickest service while maintaining warm hospitality.
-            Additionally, we are committed to preserving authentic flavor by
-            using only quality ingredients. Finally, despite the limited dining
-            and kitchen space, we always do our best to serve everyone who comes
-            through our doors.
-          </p>
-        </div>
-      </div>
     </div>
   );
 };
