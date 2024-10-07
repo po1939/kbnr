@@ -40,7 +40,7 @@ const MyComponent: React.FC = () => {
           </p>
 
           <div className="menu-navigation">
-            <div className="menu-list">
+            <ul className="menu-list">
               <MyImageButton src={kimbap} to="/menu#kimbap" label="Kimbap" />
               <MyImageButton src={entree} to="/menu#entree" label="Entree" />
               <MyImageButton src={noodle} to="/menu#noodle" label="Noodle" />
@@ -50,7 +50,7 @@ const MyComponent: React.FC = () => {
                 to="/menu#special-combo"
                 label="Special Combo"
               />
-            </div>
+            </ul>
           </div>
         </div>
       </div>
