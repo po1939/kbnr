@@ -7,7 +7,7 @@ import mail from "./../../assets/icons/mail.svg";
 
 export const Contact: React.FC = () => {
   return (
-    <div className="contact">
+    <div className="contact-page">
       <div className="container">
         <h2>CONTACT US</h2>
         <p>

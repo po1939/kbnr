@@ -1,5 +1,6 @@
-import React, {useRef} from 'react';
-import Button from '@mui/material/Button';
+import React, { useRef } from "react";
+import Button from "@mui/material/Button";
+import { HashLink } from "react-router-hash-link";
 
 interface ImageButtonProps {
   src: string;
@@ -21,17 +22,26 @@ const MyImageButton: React.FC<ImageButtonProps> = ({ src, to, label }) => {
       ripple.style.height = `${size}px`;
       ripple.style.left = `${x}px`;
       ripple.style.top = `${y}px`;
-      ripple.classList.add('show');
-      setTimeout(() => ripple.classList.remove('show'), 600);
+      ripple.classList.add("show");
+      setTimeout(() => ripple.classList.remove("show"), 600);
     }
   };
 
+  const scrollWithOffset = (el: HTMLElement) => {
+    const yOffset = -230; // Adjust this value to match your sticky navbar height
+    const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+    window.scrollTo({ top: y, behavior: "smooth" });
+  };
+
   return (
-    <Button className="img-btn" href={to}>
-      <img src = {src} />
-      <div className="ripple" ref={rippleRef} />
-      <span className="label">{label}</span>
-    </Button>
+    <HashLink smooth className="img-btn" to={to} scroll={scrollWithOffset}>
+      <Button className="p-0">
+        <img src={src} />
+        <div className="image-overlay"></div>
+        <div className="ripple" ref={rippleRef} />
+        <span className="label">{label}</span>
+      </Button>
+    </HashLink>
   );
 };
 

@@ -62,6 +62,7 @@ import ChickenKatsu from "./../../assets/images/menu/chicken_katsu.png";
 
 import MenuItemCard from "./MenuItemCard";
 import { Link as ScrollLink, LinkProps } from "react-scroll";
+import MoveToTop from "../common/MoveToTop";
 
 const MyComponent: React.FC = ({}) => {
   const legends = [
@@ -180,7 +181,6 @@ const MyComponent: React.FC = ({}) => {
       price: "$25.99",
     },
 
-    // Add more items as needed
   ];
   const entreeItems = [
     {
@@ -431,7 +431,7 @@ const MyComponent: React.FC = ({}) => {
     },
     {
       image: Rabokyi,
-      label: "Rakbokyi",
+      label: "Rabokyi",
       icon: VeganIcon,
       secondIcon: SpicyIcon,
       description: "Ddukbokyi with ramen noodles",
@@ -603,6 +603,7 @@ const MyComponent: React.FC = ({}) => {
           <MenuItemCard items={comboItems} columns={1} />
         </section>
       </div>
+      <MoveToTop />
     </div>
   );
 };

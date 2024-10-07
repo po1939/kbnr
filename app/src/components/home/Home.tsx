@@ -10,6 +10,7 @@ import GoogleReviewsWidget from "./GoogleCarousel";
 import MyImageButton from "../common/ImageButton";
 import GoogleMapsEmbed from "../common/GoogleMap";
 
+
 const MyComponent: React.FC = () => {
   return (
     <div className="home">
@@ -39,16 +40,16 @@ const MyComponent: React.FC = () => {
           </p>
 
           <div className="menu-navigation">
-            <div className="menu-list">
-              <MyImageButton src={kimbap} to="/menu" label="Kimbap" />
+            <div className="menu-list d-flex justify-content-center gap-2">
+              <MyImageButton src={kimbap} to="/menu#kimbap" label="Kimbap" />
+              <MyImageButton src={entree} to="/menu#entree" label="Entree" />
+              <MyImageButton src={noodle} to="/menu#noodle" label="Noodle" />
+              <MyImageButton src={boonsik} to="/menu#boonsik" label="Boonsik" />
               <MyImageButton
                 src={specialcombo}
-                to="/menu"
+                to="/menu#special-combo"
                 label="Special Combo"
               />
-              <MyImageButton src={entree} to="/menu" label="Entree" />
-              <MyImageButton src={noodle} to="/menu" label="Noodle" />
-              <MyImageButton src={boonsik} to="/menu" label="Boonsik" />
             </div>
           </div>
         </div>

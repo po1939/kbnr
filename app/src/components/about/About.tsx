@@ -4,7 +4,7 @@ import about1 from "./../../assets/images/kimbapnara-about-01.png";
 import about2 from "./../../assets/images/kimbapnara-about-02.png";
 const MyComponent: React.FC = () => {
   return (
-    <div className="about">
+    <div className="about-page">
       <div className="container">
         <h2 className="mb-4">About Us</h2>
       </div>

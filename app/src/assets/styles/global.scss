@@ -6,12 +6,16 @@
 @import "./footer.scss";
 
 $primary-red: #ef3e56;
+
+html{
+  scroll-behavior: smooth;
+}
 main {
   margin-top: 107px;
 }
 
-.about,
-.contact {
+.about-page,
+.contact-page {
   margin-top: 10rem;
 }
 h1 {
@@ -51,7 +55,7 @@ p {
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
   color: black;
-  line-height: 2;
+  line-height: 1.5;
   font-weight: 400;
 }
 footer {
@@ -65,6 +69,7 @@ footer {
 .container {
   max-width: 1600px;
   margin: auto;
+
 }
 
 .white-bg {
@@ -100,16 +105,20 @@ footer {
   border: none;
 }
 
+
 //image button
 .img-btn {
   position: relative;
-  padding: 0;
+  padding: 0 !important;
   min-width: auto;
-  display: inline-block; /* Ensures the image button takes up only the necessary space */
-  border: none; /* Removes any default button styling */
+  display: inline-block; 
+  border: none; 
+  border-radius: 0 !important;
   text-decoration: none; /* Ensures no underline on the link */
   overflow: hidden; /* Ensures that the image and label do not overflow the container */
-
+  img{
+    width: 236px;
+  }
   .label {
     position: absolute;
     font-family: "Open Sans", sans-serif;
@@ -117,19 +126,36 @@ footer {
     font-size: larger;
     text-transform: none;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%);
     color: white;
     text-align: center;
+    text-wrap: nowrap;
+    
+  }
+  .image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); 
+    pointer-events: none; 
+    
   }
   .ripple {
     position: absolute;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.1);
     pointer-events: none; /* Allows clicking through the ripple */
     transform: scale(0);
     transition: transform 0.6s, opacity 0.6s;
     width: 100px; /* Size of the ripple */
     height: 100px; /* Size of the ripple */
+  }
+  &:hover .image-overlay{
+    background-color: rgba(0, 0, 0, 0.4); 
+    transition: transform 0.6s, opacity 0.6s;
+
   }
   &:hover .ripple {
     transform: scale(4); /* Make the ripple effect visible */
@@ -141,7 +167,7 @@ footer {
   position: relative; /* Ensure the image container serves as the positioning context */
   .image {
     width: 100%; /* Make sure the image takes up the entire width of its container */
-    height: 400px; /* Maintain the aspect ratio */
+    height: 450px; /* Maintain the aspect ratio */
     vertical-align: middle;
     object-fit: cover;
     filter: brightness(200%);

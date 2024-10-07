@@ -1,11 +1,14 @@
 .menu {
   .nav-tab {
-    padding: 2rem;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 106px;
+    padding: 1.5rem;
     margin-top: 0.25rem;
-    background: white;
+    background:#F9F9F9;
+    &.sticky-top {
+      position: -webkit-sticky;
+      position: sticky;
+      top: 106px;
+      z-index: 99;
+    }
 
     .container {
       display: flex;
@@ -44,73 +47,86 @@
       }
     }
   }
-}
-h4 {
-  text-align: center;
-  font-weight: 900 !important;
-  font-size: 32px !important;
-  color: black !important;
-  text-transform: uppercase;
-  margin-bottom: 1rem !important;
-}
-.sticky-top {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  z-index: 99;
-}
-
-.menu-content {
-  padding: 1rem 3rem 3rem;
-  max-width: 1200px;
-  margin: auto;
-
-  .legends {
-    justify-content: flex-end;
+  section {
+    margin-bottom: 1rem;
+    &:target {
+      scroll-margin-top: 230px;
+    }
+   
   }
 
-  .menu-item-card-grid {
-    display: grid;
-    gap: 1rem;
-  }
-
-  .menu-item-card {
-    padding: 2rem;
+  h4 {
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    font-weight: 900 !important;
+    font-size: 32px !important;
+    color: black !important;
+    text-transform: uppercase;
+    margin-bottom: 1rem !important;
+  }
 
-    .menu-item-image {
-      max-width: 200px;
-      height: auto;
-      max-height: 200px;
+  .menu-content {
+    padding: 1rem 3rem 3rem;
+    max-width: 1200px;
+    margin: auto;
+
+    .legends {
+      justify-content: flex-end;
     }
 
-    .menu-item-second-image {
-      max-width: 200px;
-      height: auto;
-      max-height: 200px;
-      padding-left: 3rem;
+    .menu-item-card-grid {
+      display: grid;
+      gap: 3rem !important;
+    }
+    .menu-item-icon {
+      width: 22px;
     }
 
-    .menu-item-third-image {
-      max-width: 200px;
-      height: auto;
-      max-height: 200px;
-    }
-
-    .label {
+    .menu-item-card {
+      padding: 1.5rem;
+      gap: 0.5rem;
+      text-align: center;
       display: flex;
+      flex-direction: column;
       align-items: center;
-    }
+        &.fishcake{
+            img{
+                margin-right: -8px;
+            }
+        }
+      .kimbap-image {
+        padding: 5px;
+      }
 
-    label {
-      padding-top: 0.5rem;
-      text-transform: uppercase;
-      font-size: 26px;
-      font-weight: 600;
-      font-family: "Montserrat", sans-serif;
+      .two-images,
+      .three-images {
+        gap: 1rem;
+        display: flex;
+      }
+
+      .menu-item-image {
+        width: auto;
+        height: 150px;
+      }
+
+      .label {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      label {
+        text-transform: uppercase;
+        font-size: 26px;
+        font-weight: 600;
+        font-family: "Montserrat", sans-serif;
+      }
+      b {
+        font-family: "Montserrat", sans-serif;
+        font-size: 20px;
+      }
+      p {
+        margin-bottom: 0;
+      }
     }
   }
 }
