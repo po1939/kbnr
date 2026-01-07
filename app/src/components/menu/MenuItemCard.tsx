@@ -107,7 +107,7 @@ export default function MenuItemCard({
               )}
             </div>
             {item.description && <p>{item.description}</p>}
-            <b>{item.price}</b>
+            {/* <b>{item.price}</b> */}
           </div>
         );
       })}
