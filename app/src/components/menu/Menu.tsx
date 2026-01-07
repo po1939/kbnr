@@ -61,7 +61,6 @@ import Donkatsu from "./../../assets/images/menu/donkatsu.png";
 import ChickenKatsu from "./../../assets/images/menu/chicken_katsu.png";
 
 import MenuItemCard from "./MenuItemCard";
-import { Link as ScrollLink, LinkProps } from "react-scroll";
 import MoveToTop from "../common/MoveToTop";
 
 const MyComponent: React.FC = ({}) => {
