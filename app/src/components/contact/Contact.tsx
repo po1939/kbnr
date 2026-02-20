@@ -29,7 +29,7 @@ export const Contact: React.FC = () => {
           </div>
           <div className="contact-info-item">
             <img src={phone} alt="phone-icon"/>
-            (410)-456-9166
+            (410)-465-9166
           </div>
           <div className="contact-info-item">
             <img src={mail} alt="email-icon"/>

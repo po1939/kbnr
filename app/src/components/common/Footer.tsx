@@ -84,7 +84,7 @@ const Footer: React.FC = () => {
                 <div>Tue: CLOSED</div>
               </div>
               <div>Dine In Closes 30 Minutes Prior To Closing Time</div>
-              <div>(410) 456-9166</div>
+              <div>(410) 465-9166</div>
             </div>
             <div className="nav-container">
               {navLinks.map((section, index) => (
