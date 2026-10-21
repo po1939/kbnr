@@ -97,6 +97,7 @@ const MyComponent: React.FC = ({}) => {
     },
     {
       image: NudeKimbap,
+      icon: VeganIcon,
       label: "Nude Kimbap",
       description: "Inside out Veggie Kimbap",
       price: "$7.50",
@@ -116,6 +117,7 @@ const MyComponent: React.FC = ({}) => {
     },
     {
       image: MiniKimbap,
+      icon: VeganIcon,
       label: "Finger/Mini Kimbap",
       description: "Spinach & Carrots",
       price: "$7.99",
